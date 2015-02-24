@@ -1,3 +1,4 @@
+# Digital Library
 Digital Library is the name given to the resource containing all the elements of digital design, their explanations, and examples. From the smallest building block, to complete page templates, you will be able to construct a digital asset from these items, safe in the knowledge you’re being consistent across the business.
 
 We have documented our [atoms](atoms) and [molecules](molecules) and will work with other teams to build these out into organisms, pages and templates as the project evolves and as business requirements dictate.
@@ -13,7 +14,7 @@ We have documented our [atoms](atoms) and [molecules](molecules) and will work w
 - web content management / operating system agnostic.
 
 ## Three’s Digital Library is not
-- a “styleguide” or “pattern library” to describe this resource - both have specific connotations and pre-formed      rules on how they work and are used.
+- a “styleguide” or “pattern library” - both have specific connotations and pre-formed      rules on how they work and are used.
 - a Content Management System (CMS) – for example Hybris, Fatwire etc
 - a server-side development framework
 - a programming language
