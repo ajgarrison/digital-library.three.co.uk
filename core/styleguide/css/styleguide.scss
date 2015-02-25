@@ -48,11 +48,11 @@
 $sg-font : "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 
 /* Style Guide Interface Colors */ 
-$sg-primary : #222;
-$sg-secondary : #808080;
+$sg-primary : #fff;
+$sg-secondary : #767676;
 $sg-tertiary : #ddd;
-$sg-quaternary : #fff;
-$sg-quinary : #999;
+$sg-quaternary : #555;
+$sg-quinary : #000;
 $sg-tint : rgba(255,255,255,0.05);
 $sg-tint-2 : rgba(255,255,255,0.25);
 $sg-tone : rgba(0,0,0,0.1);
@@ -66,11 +66,11 @@ $sg-font-size-large : 120%;
 /* Defaults */
 $sg-space : 1em;
 $sg-doublespace : $sg-space*2;
-$sg-pad : 1em;
+$sg-pad : 1.5em;
 $sg-pad-half : $sg-pad/2;
 
 /* Dimensions */
-$offset-top: 2em;
+$offset-top: 4em;
 
 /* Breakpoints */
 $sg-bp-small : 24em;
@@ -150,14 +150,14 @@ $animate-quick: 0.2s;
 /* Header */
 .sg-header {
 	background: $sg-primary;
-	color: $sg-quaternary;
+	color: $sg-quinary;
 	font-family: $sg-font;
-	text-transform: uppercase;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 2;
 	width: 100%;
+	border-bottom: 1px solid $sg-secondary;
 
 	* {
 	  -moz-box-sizing: border-box;
@@ -172,12 +172,12 @@ $animate-quick: 0.2s;
 
 	li {
 		list-style: none;
-		border-bottom: 1px solid $sg-tint;
+		border-bottom: 1px solid $sg-quaternary;
 	}
 
 	a {
-		font-size: $sg-font-size-sm;
-		color: $sg-secondary;
+		font-size: $sg-font-size-norm;
+		color: $sg-quinary;
 		text-decoration: none;
 		display: block;
 		line-height: 1;
@@ -186,15 +186,28 @@ $animate-quick: 0.2s;
 		@include sg-transition(color,0.15s,ease-out);
 		
 		&:hover, &:focus, &.active {
-			color: $sg-quaternary;
-			background: $sg-tint;
+			color: $sg-primary;
+			background: $sg-quaternary;
 		}
 	}
 
+	ol ol a { //2nd level nav item
+		color: $sg-primary;
+		padding: $sg-pad-half;
+    }
 	ol ol ol a { //3rd level nav item
 		padding-left: 2em;
 		text-transform: none;
     }
+}
+
+
+/* Logo */
+.sg-logo { 
+	float:left; 
+	height:3em; 
+	width:auto; 
+	margin:0.5em 1em;
 }
 
 
@@ -268,7 +281,7 @@ $animate-quick: 0.2s;
 	}
 	
 	&.active {
-		color: $sg-quaternary;
+		color: $sg-primary;
 		background: $sg-tint;
 		&:after {
 			content: ' -';
@@ -289,11 +302,11 @@ $animate-quick: 0.2s;
 .sg-acc-panel {
 	overflow: hidden;
 	max-height: 0;
-	min-width: 10em;
+	min-width: 15em;
 	@include sg-transition(max-height,0.1s,ease-out);
 
 	li {
-		background: $sg-primary;
+		background: $sg-secondary;
 	}
 
 	&.active {
@@ -369,6 +382,7 @@ $animate-quick: 0.2s;
 }
 
 .sg-current-size {
+	display: none; // Because you can't disable it in the config.ini - HELPFUL!
 	font-size: 70%;
 	color: $sg-secondary;
 	padding: 0.85em 0.7em;
