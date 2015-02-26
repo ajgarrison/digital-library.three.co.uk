@@ -103,7 +103,11 @@ $animate-quick: 0.2s;
 	transition: $transition-property $transition-time $method;
 }
 
-
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
 
 
 
@@ -155,6 +159,18 @@ $animate-quick: 0.2s;
     $PATTERN LAB HEADER 
 \*------------------------------------*/
 /* Header */
+
+.sg-brand { 
+  color: $sg-black;
+  &.active, &.visited, &.visited:hover {
+  	color: $sg-black;
+  }
+  &.hover, &.focus {
+    color: $sg-grey2;
+  }
+}
+
+
 .sg-header {
 	background: $sg-white;
 	color: $sg-black;
@@ -182,7 +198,9 @@ $animate-quick: 0.2s;
 		border-bottom: 1px solid $sg-grey2;
 	}
 
-	a {
+	.sg-nav-toggle,
+	.sg-nav-container a,
+	.sg-controls a {
 		font-size: $sg-font-size-norm;
 		color: $sg-black;
 		text-decoration: none;
@@ -203,13 +221,13 @@ $animate-quick: 0.2s;
 
 	}
 
-	ol ol a { //2nd level nav item
+	.sg-nav-container ol ol a { //2nd level nav item
 		color: $sg-black;
 		padding: $sg-pad-half;
     }
 
-  ol ol ol a { //3rd level nav item
-		padding-left: 2em;
+  .sg-nav-container ol ol ol a { //3rd level nav item
+		padding-left: 1em;
 		text-transform: none;
 		background: $sg-grey0;
     }
@@ -299,21 +317,17 @@ $animate-quick: 0.2s;
 
 /* Accordion */
 .sg-acc-handle {
-	&:after {
-		//content: ' +';
+	.sg-nav-more {
 		float: right;
-		font-size: $sg-font-size-sm;
-		
-		@media all and (min-width: $sg-bp-med) {
-			float: none;
-		}
+		margin-left:7px;
+		@include opacity(0.6);
 	}
 	
 	&.active {
 		color: $sg-quinary;
 		background: $sg-tint;
-		&:after {
-			//content: ' -';
+		.sg-nav-more {
+			@include opacity(1);
 		}
 	}
 

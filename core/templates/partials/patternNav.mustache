@@ -1,8 +1,8 @@
 <ol class="sg-nav">
 	{{# patternTypes }}
-		<li class="sg-nav-{{ patternTypeLC }}"><a class="sg-acc-handle">{{ patternTypeUC }}</a><ol class="sg-acc-panel">
+		<li class="sg-nav-{{ patternTypeLC }}"><a class="sg-acc-handle">{{ patternTypeUC }} <img src="styleguide/images/arrow_down.png" alt="" class="sg-nav-more"></a><ol class="sg-acc-panel">
 		{{# patternTypeItems }}
-			<li class="sg-nav-{{ patternSubtypeLC }}"><a class="sg-acc-handle">{{ patternSubtypeUC }}</a><ol class="sg-acc-panel sg-sub-nav">
+			<li class="sg-nav-{{ patternSubtypeLC }}"><a class="sg-acc-handle">{{ patternSubtypeUC }} <img src="styleguide/images/arrow_down.png" alt="" class="sg-nav-more"></a><ol class="sg-acc-panel sg-sub-nav">
 			{{# patternSubtypeItems }}
 				<li><a href="patterns/{{ patternPath }}" class="sg-pop  {{# patternState }}sg-pattern-state {{ . }}{{/ patternState }}" data-patternpartial="{{ patternPartial }}">{{ patternName }}</a></li>
 			{{/ patternSubtypeItems }}
