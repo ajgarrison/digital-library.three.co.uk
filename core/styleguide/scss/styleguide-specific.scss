@@ -1,0 +1,115 @@
+/*------------------------------------*\
+    $PATTERN LAB-SPECIFIC STYLES
+\*------------------------------------*/
+/**
+ * This stylesheet is for styles you want to include only when the interface is being viewed within Pattern Lab.
+ * This is helpful for displaying demo styles for grids, animations, color swatches, etc
+ * It's also helpful for overriding context-specific styles like fixed or absolutely positioned elements
+ * These styles will not be your production CSS.
+ */
+ 
+
+/* Style Guide Interface Colors */ 
+$sg-primary : #222;
+$sg-secondary : #808080;
+$sg-tertiary : #ddd;
+$sg-quaternary : #fff;
+$sg-quinary : #999;
+$sg-tint : rgba(255,255,255,0.05);
+$sg-tint-2 : rgba(255,255,255,0.25);
+$sg-tone : rgba(0,0,0,0.1);
+$sg-tone-2 : rgba(0,0,0,0.3);
+
+/* Typography */
+$sg-font-size-norm : 100%;
+$sg-font-size-sm : 70%;
+$sg-font-size-large : 120%;
+
+/* Defaults */
+$sg-space : 1em;
+$sg-doublespace : $sg-space*2;
+$sg-pad : 1em;
+$sg-pad-half : $sg-pad/2;
+
+/* Dimensions */
+$offset-top: 2em;
+
+/* Breakpoints */
+$sg-bp-small : 24em;
+$sg-bp-small-2 : 30em;
+$sg-bp-med : 48em;
+$sg-bp-large : 72em;
+$sg-bp-xl : 80em;
+
+$animate-quick: 0.2s;
+
+
+// MIXINS
+// Because I can't figure out how to use Compass + PrePros on a Mac, yet.
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+// Style Guide color swatches
+.sg-colors {
+	overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+	li {
+		overflow: hidden;
+    margin: 1em;
+
+		@media all and (min-width: $sg-bp-small-2) {
+			float: left;
+			width: 20em;
+		}
+	}
+
+  dl {
+    text-transform: uppercase;
+  }
+
+}
+
+.sg-swatch {
+	display: block;
+	height: 8em;
+	width: 8em;
+	margin:1em auto;
+	color: #fff; 
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	@include border-radius(250px);
+	
+	span {
+		display: block;
+		@include vertical-align;
+	}
+
+	@media all and (max-width: $sg-bp-small-2) {
+
+	}
+
+	@media all and (min-width: $sg-bp-small-2) {
+
+	}
+	
+}
+
+.sg-label {
+	line-height: 1;
+}
