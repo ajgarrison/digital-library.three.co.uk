@@ -186,6 +186,7 @@ $animate-quick: 0.2s;
 		font-size: $sg-font-size-norm;
 		color: $sg-black;
 		text-decoration: none;
+		font-weight: bold;
 		display: block;
 		line-height: 1;
 		padding: $sg-pad $sg-pad-half;
@@ -206,6 +207,7 @@ $animate-quick: 0.2s;
 	ol ol a { //2nd level nav item
 		color: $sg-black;
 		padding: $sg-pad-half;
+		//font-weight: normal;
     }
 
   ol ol ol a { //3rd level nav item

@@ -63,6 +63,8 @@ $sg-grey0: #eee;
 $sg-grey1: #ddd;
 $sg-grey2: #ccc;
 $sg-grey3: #aaa;
+$sg-grey4: #333;
+$sg-grey5: #777;
 $sg-black: #000;
 
 /* Typography */
@@ -204,6 +206,7 @@ $animate-quick: 0.2s;
 		font-size: $sg-font-size-norm;
 		color: $sg-black;
 		text-decoration: none;
+		font-weight: bold;
 		display: block;
 		line-height: 1;
 		padding: $sg-pad $sg-pad-half;
@@ -224,6 +227,7 @@ $animate-quick: 0.2s;
 	.sg-nav-container ol ol a { //2nd level nav item
 		color: $sg-black;
 		padding: $sg-pad-half;
+		font-weight: normal;
     }
 
   .sg-nav-container ol ol ol a { //3rd level nav item
@@ -743,8 +747,8 @@ span.sg-pattern-state:before {
 	font-family: $sg-font;
 	line-height: 1.4;
 	font-size: 90%;
-	background: $sg-primary;
-	color: $sg-secondary;
+	background: $sg-grey5;
+	color: $sg-primary;
 	position: fixed;
 	top: auto;
 	padding: $sg-pad;
@@ -956,7 +960,7 @@ div.clear {
 }
 
 .sg-icon-search, .sg-icon-cog, .sg-icon-minus, .sg-icon-plus, .sg-icon-menu, .sg-icon-radio-checked, .sg-icon-radio-unchecked, .sg-icon-file, .sg-icon-link, .sg-icon-keyboard, .sg-icon-qrcode, .sg-icon-eye, .sg-checkbox {
-	font-family: 'icomoon';
+	font-family: 'icomoon', $sg-font;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
