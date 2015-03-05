@@ -1,0 +1,31 @@
+// Typography defaults
+$black        : rgb(0,0,0);
+$darkergrey   : lighten($black, 15%);
+$darkgrey     : lighten($black, 25%);
+$grey         : lighten($black, 50%);
+$lightgrey    : lighten($black, 70%);
+$lightergrey  : lighten($black, 90%);
+$lightestgrey : lighten($black, 95%);
+$white        : rgb(255,255,255);
+
+$twitter  : #55acee;
+$facebook : #3b5998;
+
+$bodycolor      : $white;
+$textcolor      : #111;
+
+$basefont               : 'Helvetica', 'Arial', sans-serif;
+$basefontsize           : 16;
+$baselineheight         : 1.5em;
+$baseheadingfont        : 'Helvetica', 'Arial', sans-serif;
+$baseheadingfontweight  : 400;
+$baseheadingfontcolor   : inherit;
+
+
+// Breakpoints
+// Assuming a 16px base, thse are 320 / 384 / 768 / 960 / 1280px
+$bp-xsmall : 20em;
+$bp-small : 24em;
+$bp-med : 48em;
+$bp-large : 60em;
+$bp-xlarge : 80em;

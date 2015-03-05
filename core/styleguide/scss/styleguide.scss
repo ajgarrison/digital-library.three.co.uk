@@ -720,11 +720,11 @@ span.sg-pattern-state:before {
 
 /* Section Head */
 .sg-pattern-head {
-	margin: $sg-doublespace 0;
-	font-family: $sg-font;
-	font-size: $sg-font-size-sm;
-	font-weight: normal;
-	padding: $sg-pad 0;
+	// margin: $sg-doublespace 0;
+	// font-family: $sg-font;
+	// font-size: $sg-font-size-sm;
+	// font-weight: normal;
+	// padding: $sg-pad 0;
 	border-bottom: 1px solid $sg-secondary;
 
 	a {
@@ -734,7 +734,7 @@ span.sg-pattern-state:before {
 		cursor: pointer;
 		
 		&:hover {
-			color: $sg-primary;
+			color: $sg-black;
 		}
 	}
 }

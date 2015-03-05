@@ -71,10 +71,24 @@ $animate-quick: 0.2s;
 	li {
 		overflow: hidden;
     margin: 1em;
+    height: 320px; // Since everything has the same content, this is an acceptable clean way to ensure float clears.
 
-		@media all and (min-width: $sg-bp-small-2) {
-			float: left;
-			width: 20em;
+    @media all and (min-width: $sg-bp-small-2) {
+      float: left;
+      width: 48%;
+      margin: 1%;
+    }
+    @media all and (min-width: $sg-bp-med) {
+      width: 31%;
+      margin: 1%;
+    }
+    @media all and (min-width: $sg-bp-large) {
+      width: 23%;
+      margin: 1%;
+    }
+		@media all and (min-width: $sg-bp-xl) {
+			width: 18%;
+      margin: 1%;
 		}
 	}
 
