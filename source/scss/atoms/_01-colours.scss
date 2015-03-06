@@ -1,0 +1,57 @@
+// Colours.
+
+// Base colours.
+$ken      : #ec0044;
+$hucknall : #dc350e;
+$barbie   : #e90066;
+$prince   : #82368c;
+$maggie   : #007bc3;
+$kermit   : #00857b;
+$hulk     : #00864e;
+$clooney  : #767676;
+$vader    : #000;
+
+// Tints.
+// Tint adds a percentage of white to a colour, so a 60% tint of a colour is that colour tinted with 40% white (where both values add up to 100%).
+$ken_tint_60pc      : tint(#ec0044, 40%);
+$hucknall_tint_60pc : tint(#dc350e, 40%);
+$barbie_tint_60pc   : tint(#e90066, 40%);
+$prince_tint_60pc   : tint(#82368c, 40%);
+$maggie_tint_60pc   : tint(#007bc3, 40%);
+$kermit_tint_60pc   : tint(#00857b, 40%);
+$hulk_tint_60pc     : tint(#00864e, 40%);
+$clooney_tint_60pc  : tint(#767676, 40%);
+$vader_tint_60pc    : tint(#000, 40%);
+
+$ken_tint_20pc      : tint(#ec0044, 80%);
+$hucknall_tint_20pc : tint(#dc350e, 80%);
+$barbie_tint_20pc   : tint(#e90066, 80%);
+$prince_tint_20pc   : tint(#82368c, 80%);
+$maggie_tint_20pc   : tint(#007bc3, 80%);
+$kermit_tint_20pc   : tint(#00857b, 80%);
+$hulk_tint_20pc     : tint(#00864e, 80%);
+$clooney_tint_20pc  : tint(#767676, 80%);
+$vader_tint_20pc    : tint(#000, 80%);
+
+
+// Shades.
+// Shades adds a percentage of black to a colour, so a 60% shade of a colour is that colour shaded with 40% black (where both values add up to 100%).
+$ken_shade_60pc      : shade(#ec0044, 40%);
+$hucknall_shade_60pc : shade(#dc350e, 40%);
+$barbie_shade_60pc   : shade(#e90066, 40%);
+$prince_shade_60pc   : shade(#82368c, 40%);
+$maggie_shade_60pc   : shade(#007bc3, 40%);
+$kermit_shade_60pc   : shade(#00857b, 40%);
+$hulk_shade_60pc     : shade(#00864e, 40%);
+$clooney_shade_60pc  : shade(#767676, 40%);
+// $vader_shade_60pc    : shade(#000, 40%); // Vader doesn't need a shade, it's already black!
+
+$ken_shade_20pc      : shade(#ec0044, 80%);
+$hucknall_shade_20pc : shade(#dc350e, 80%);
+$barbie_shade_20pc   : shade(#e90066, 80%);
+$prince_shade_20pc   : shade(#82368c, 80%);
+$maggie_shade_20pc   : shade(#007bc3, 80%);
+$kermit_shade_20pc   : shade(#00857b, 80%);
+$hulk_shade_20pc     : shade(#00864e, 80%);
+$clooney_shade_20pc  : shade(#767676, 80%);
+// $vader_shade_20pc    : shade(#000, 80%); // Vader doesn't need a shade, it's already black!

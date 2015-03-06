@@ -37,8 +37,6 @@ font-family : $basefont;
 line-height : $baselineheight;
 color : $textcolor; }
 
-img { display:block; margin:0; padding:0; }
-
 *::-moz-selection {
   background: $darkgrey; /* Firefox */
   color: $white;
