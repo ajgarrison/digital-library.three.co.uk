@@ -70,7 +70,6 @@ $animate-quick: 0.2s;
 
 	li {
 		overflow: hidden;
-    margin: 1em;
     height: 320px; // Since everything has the same content, this is an acceptable clean way to ensure float clears.
 
     @media all and (min-width: $sg-bp-small-2) {
@@ -102,7 +101,7 @@ $animate-quick: 0.2s;
 	display: block;
 	height: 8em;
 	width: 8em;
-	margin:1em auto;
+	margin:0 auto;
 	color: #fff; 
 	font-weight: bold;
 	text-align: center;
@@ -114,7 +113,7 @@ $animate-quick: 0.2s;
 		@include vertical-align;
 	}
 
-	@media all and (max-width: $sg-bp-small-2) {
+	@media all and (min-width: $sg-bp-small-2) {
 
 	}
 
@@ -126,4 +125,13 @@ $animate-quick: 0.2s;
 
 .sg-label {
 	line-height: 1;
+}
+
+.sg-main {
+  padding: 10px;
+
+  @media all and (min-width: $sg-bp-med) {
+    padding: 20px;
+  }
+
 }

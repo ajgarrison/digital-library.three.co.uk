@@ -7,111 +7,136 @@ h4,
 h5,
 h6 {
   // Remove the default margins.
-  margin: 0 0 1.25rem 0;
+  margin: 0 0 0.75em 0;
 }
 
 
 // Base sizes, breakpoint font sizes are based on these.
-$h1_base: 30;
-$h2_base: 26;
-$h3_base: 22;
-$h4_base: 18;
-$h5_base: 16;
-$h6_base: 14;
+$text-size-0-base : 40;
+$text-size-1-base : 32;
+$text-size-2-base : 28;
+$text-size-3-base : 24;
+$text-size-4-base : 20;
+$text-size-5-base : 18;
+$text-size-6-base : 16;
 
+$text-scale-small : 1;
+$text-scale-med   : 1.5;
+$text-scale-large : 2;
 
-h1 {
+// Oversized utility class 
+.u-text-size-0 {
 
-  @include font-size( $h1_base );
+  // font-size mixin takes 2 variables, sie and line-height.
+  @include font-size( floor($text-size-0-base * $text-scale-small), floor($text-size-0-base * ($text-scale-small * 1.1) ) );
 
     @media all and (min-width: $bp-small) {
-      @include font-size( floor($h1_base * 1) );
+      // font-size and scale, plus line height at +10%
+      @include font-size( floor($text-size-0-base * $text-scale-small), floor($text-size-0-base * ($text-scale-small * 1.1) ) );
     }
     @media all and (min-width: $bp-med) {
-       @include font-size( floor($h1_base * 1.5) );
+      // font-size and scale, plus line height at +10%
+       @include font-size( floor($text-size-0-base * $text-scale-med), floor($text-size-0-base * ($text-scale-med * 1.1) ) );
     }
     @media all and (min-width: $bp-large) {
-      @include font-size( floor($h1_base * 2) );
+      // font-size and scale, plus line height at +10%
+      @include font-size( floor($text-size-0-base * $text-scale-large), floor($text-size-0-base * ($text-scale-large * 1.1) ) );
     }
 
 }
 
-h2 {
+h1, .u-text-size-1 {
 
-  @include font-size( $h2_base );
+  @include font-size( floor($text-size-1-base * $text-scale-small), floor($text-size-1-base * ($text-scale-small * 1.1) ) );
 
     @media all and (min-width: $bp-small) {
-      @include font-size( floor($h2_base * 1) );
+      @include font-size( floor($text-size-1-base * $text-scale-small), floor($text-size-1-base * ($text-scale-small * 1.1) ) );
     }
     @media all and (min-width: $bp-med) {
-       @include font-size( floor($h2_base * 1.5) );
+       @include font-size( floor($text-size-1-base * $text-scale-med), floor($text-size-1-base * ($text-scale-med * 1.1) ) );
     }
     @media all and (min-width: $bp-large) {
-      @include font-size( floor($h2_base * 2) );
+      @include font-size( floor($text-size-1-base * $text-scale-large), floor($text-size-1-base * ($text-scale-large * 1.1) ) );
     }
 
 }
 
-h3 {
+h2, .u-text-size-2 {
 
-  @include font-size( $h3_base );
+  @include font-size( floor($text-size-2-base * $text-scale-small), floor($text-size-2-base * ($text-scale-small * 1.1) ) );
 
     @media all and (min-width: $bp-small) {
-      @include font-size( floor($h3_base * 1) );
+      @include font-size( floor($text-size-2-base * $text-scale-small), floor($text-size-2-base * ($text-scale-small * 1.1) ) );
     }
     @media all and (min-width: $bp-med) {
-       @include font-size( floor($h3_base * 1.5) );
+       @include font-size( floor($text-size-2-base * $text-scale-med), floor($text-size-2-base * ($text-scale-med * 1.1) ) );
     }
     @media all and (min-width: $bp-large) {
-      @include font-size( floor($h3_base * 2) );
+      @include font-size( floor($text-size-2-base * $text-scale-large), floor($text-size-2-base * ($text-scale-large * 1.1) ) );
     }
 
 }
 
-h4 {
+h3, .u-text-size-3 {
 
-  @include font-size( $h4_base );
+  @include font-size( floor($text-size-3-base * $text-scale-small), floor($text-size-3-base * ($text-scale-small * 1.1) ) );
 
     @media all and (min-width: $bp-small) {
-      @include font-size( floor($h4_base * 1) );
+      @include font-size( floor($text-size-3-base * $text-scale-small), floor($text-size-3-base * ($text-scale-small * 1.1) ) );
     }
     @media all and (min-width: $bp-med) {
-       @include font-size( floor($h4_base * 1.5) );
+       @include font-size( floor($text-size-3-base * $text-scale-med), floor($text-size-3-base * ($text-scale-med * 1.1) ) );
     }
     @media all and (min-width: $bp-large) {
-      @include font-size( floor($h4_base * 2) );
+      @include font-size( floor($text-size-3-base * $text-scale-large), floor($text-size-3-base * ($text-scale-large * 1.1) ) );
     }
 
 }
 
-h5 {
+h4, .u-text-size-4 {
 
-  @include font-size( $h5_base );
+  @include font-size( floor($text-size-4-base * $text-scale-small), floor($text-size-4-base * ($text-scale-small * 1.1) ) );
 
     @media all and (min-width: $bp-small) {
-      @include font-size( floor($h5_base * 1) );
+      @include font-size( floor($text-size-4-base * $text-scale-small), floor($text-size-4-base * ($text-scale-small * 1.1) ) );
     }
     @media all and (min-width: $bp-med) {
-       @include font-size( floor($h5_base * 1.5) );
+       @include font-size( floor($text-size-4-base * $text-scale-med), floor($text-size-4-base * ($text-scale-med * 1.1) ) );
     }
     @media all and (min-width: $bp-large) {
-      @include font-size( floor($h5_base * 2) );
+      @include font-size( floor($text-size-4-base * $text-scale-large), floor($text-size-4-base * ($text-scale-large * 1.1) ) );
     }
 
 }
 
-h6 {
+h5, .u-text-size-5 {
 
-  @include font-size( $h6_base );
+  @include font-size( floor($text-size-5-base * $text-scale-small), floor($text-size-5-base * ($text-scale-small * 1.1) ) );
 
     @media all and (min-width: $bp-small) {
-      @include font-size( floor($h6_base * 1) );
+      @include font-size( floor($text-size-5-base * $text-scale-small), floor($text-size-5-base * ($text-scale-small * 1.1) ) );
     }
     @media all and (min-width: $bp-med) {
-       @include font-size( floor($h6_base * 1.5) );
+       @include font-size( floor($text-size-5-base * $text-scale-med), floor($text-size-5-base * ($text-scale-med * 1.1) ) );
     }
     @media all and (min-width: $bp-large) {
-      @include font-size( floor($h6_base * 2) );
+      @include font-size( floor($text-size-5-base * $text-scale-large), floor($text-size-5-base * ($text-scale-large * 1.1) ) );
+    }
+
+}
+
+h6, .u-text-size-6 {
+
+  @include font-size( floor($text-size-6-base * $text-scale-small), floor($text-size-6-base * ($text-scale-small * 1.1) ) );
+
+    @media all and (min-width: $bp-small) {
+      @include font-size( floor($text-size-6-base * $text-scale-small), floor($text-size-6-base * ($text-scale-small * 1.1) ) );
+    }
+    @media all and (min-width: $bp-med) {
+       @include font-size( floor($text-size-6-base * $text-scale-med), floor($text-size-6-base * ($text-scale-med * 1.1) ) );
+    }
+    @media all and (min-width: $bp-large) {
+      @include font-size( floor($text-size-6-base * $text-scale-large), floor($text-size-6-base * ($text-scale-large * 1.1) ) );
     }
 
 }
