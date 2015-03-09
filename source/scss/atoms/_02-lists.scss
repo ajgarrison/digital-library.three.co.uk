@@ -10,14 +10,46 @@ ol, ul {
 
 }
 
+.c-icon-list {
+  list-style-type: none;
+
+  li {
+    text-indent: -1.75em;
+  }
+
+  li:before {
+    font-family: "h3g-icons";
+    float: left;
+    width: 1.75em;
+  }  
+
+  .c-icon-list__icon-pound-circle:before { content: "\e63f"; }
+  .c-icon-list__icon-checkbox-tick:before { content: "\e639"; }
+  .c-icon-list__icon-phone-download:before { content: "\e63a"; }
+  .c-icon-list__icon-apple:before { content: "\e636"; }
+}
+
 
 dl {
 
   dt {
+    font-weight: bold;
+  }
+
+  dd {
+
+  }
+
+}
+
+dl.c-split-difinition {
+  @include group();
+
+  dt {
+    @extend dt;
     margin: 0;
     text-align: left;
     width: 50%;
-    font-weight: bold;
   }
 
   dd {
@@ -28,8 +60,9 @@ dl {
     width: 100%;
   }
 
-}
   dt, dd {
     float: left;
     padding: 0.5rem;
   }
+
+}
