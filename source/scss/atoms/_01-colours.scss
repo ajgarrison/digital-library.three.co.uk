@@ -55,3 +55,66 @@ $kermit_shade_20pc   : shade(#00857b, 80%);
 $hulk_shade_20pc     : shade(#00864e, 80%);
 $clooney_shade_20pc  : shade(#767676, 80%);
 // $vader_shade_20pc    : shade(#000, 80%); // Vader doesn't need a shade, it's already black!
+
+.colour-ken             { color: $ken; }
+.background-ken         { background: $ken; }
+.colour-ken--tint-60pc  { color: $ken_tint_60pc; }
+.colour-ken--tint-20pc  { color: $ken_tint_20pc; }
+.colour-ken--shade-60pc { color: $ken_shade_60pc; }
+.colour-ken--shade-20pc { color: $ken_shade_20pc; }
+
+.colour-hucknall             { color: $hucknall; }
+.background-hucknall         { background: $hucknall; }
+.colour-hucknall--tint-60pc  { color: $hucknall_tint_60pc; }
+.colour-hucknall--tint-20pc  { color: $hucknall_tint_20pc; }
+.colour-hucknall--shade-60pc { color: $hucknall_shade_60pc; }
+.colour-hucknall--shade-20pc { color: $hucknall_shade_20pc; }
+
+.colour-barbie             { color: $barbie; }
+.background-barbie         { background: $barbie; }
+.colour-barbie--tint-60pc  { color: $barbie_tint_60pc; }
+.colour-barbie--tint-20pc  { color: $barbie_tint_20pc; }
+.colour-barbie--shade-60pc { color: $barbie_shade_60pc; }
+.colour-barbie--shade-20pc { color: $barbie_shade_20pc; }
+
+.colour-prince             { color: $prince; }
+.background-prince         { background: $prince; }
+.colour-prince--tint-60pc  { color: $prince_tint_60pc; }
+.colour-prince--tint-20pc  { color: $prince_tint_20pc; }
+.colour-prince--shade-60pc { color: $prince_shade_60pc; }
+.colour-prince--shade-20pc { color: $prince_shade_20pc; }
+
+.colour-maggie             { color: $maggie; }
+.background-maggie         { background: $maggie; }
+.colour-maggie--tint-60pc  { color: $maggie_tint_60pc; }
+.colour-maggie--tint-20pc  { color: $maggie_tint_20pc; }
+.colour-maggie--shade-60pc { color: $maggie_shade_60pc; }
+.colour-maggie--shade-20pc { color: $maggie_shade_20pc; }
+
+.colour-kermit             { color: $kermit; }
+.background-kermit         { background: $kermit; }
+.colour-kermit--tint-60pc  { color: $kermit_tint_60pc; }
+.colour-kermit--tint-20pc  { color: $kermit_tint_20pc; }
+.colour-kermit--shade-60pc { color: $kermit_shade_60pc; }
+.colour-kermit--shade-20pc { color: $kermit_shade_20pc; }
+
+.colour-hulk             { color: $hulk; }
+.background-hulk         { background: $hulk; }
+.colour-hulk--tint-60pc  { color: $hulk_tint_60pc; }
+.colour-hulk--tint-20pc  { color: $hulk_tint_20pc; }
+.colour-hulk--shade-60pc { color: $hulk_shade_60pc; }
+.colour-hulk--shade-20pc { color: $hulk_shade_20pc; }
+
+.colour-clooney             { color: $clooney; }
+.background-clooney         { background: $clooney; }
+.colour-clooney--tint-60pc  { color: $clooney_tint_60pc; }
+.colour-clooney--tint-20pc  { color: $clooney_tint_20pc; }
+.colour-clooney--shade-60pc { color: $clooney_shade_60pc; }
+.colour-clooney--shade-20pc { color: $clooney_shade_20pc; }
+
+.colour-vader             { color: $vader; }
+.background-vader         { background: $vader; }
+.colour-vader--tint-60pc  { color: $vader_tint_60pc; }
+.colour-vader--tint-20pc  { color: $vader_tint_20pc; }
+// .colour-vader--shade-60pc { color: $vader_shade_60pc; }
+// .colour-vader--shade-20pc { color: $vader_shade_20pc; }

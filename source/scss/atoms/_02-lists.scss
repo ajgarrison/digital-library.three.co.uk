@@ -10,7 +10,7 @@ ol, ul {
 
 }
 
-.c-icon-list {
+.list--icons {
   list-style-type: none;
 
   li {
@@ -23,10 +23,6 @@ ol, ul {
     width: 1.75em;
   }  
 
-  .c-icon-list__icon-pound-circle:before { content: "\e63f"; }
-  .c-icon-list__icon-checkbox-tick:before { content: "\e639"; }
-  .c-icon-list__icon-phone-download:before { content: "\e63a"; }
-  .c-icon-list__icon-apple:before { content: "\e636"; }
 }
 
 
@@ -42,7 +38,7 @@ dl {
 
 }
 
-dl.c-split-difinition {
+dl.definition--split {
   @include group();
 
   dt {
@@ -62,7 +58,8 @@ dl.c-split-difinition {
 
   dt, dd {
     float: left;
-    padding: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
 }
