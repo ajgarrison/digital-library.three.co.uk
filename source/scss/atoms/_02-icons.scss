@@ -9,8 +9,18 @@
        url("/public/fonts/h3g-icons.svg#h3g-icons") format("svg");
 }
 
+[class^="icon-"]:before, 
+[class*=" icon-"]:before {
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "h3g-icons";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: none;
+}
 
-.icon-iphone-0800:before { content: "\640 "; }
+.icon-iphone-0800:before { content: "\e640"; }
 .icon-pound-circle:before { content: "\e63f"; }
 .icon-checkbox-tick:before { content: "\e639"; }
 .icon-phone-download:before { content: "\e63a"; }

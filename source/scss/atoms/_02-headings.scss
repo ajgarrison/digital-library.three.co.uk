@@ -13,110 +13,129 @@ h6 {
 
 // Base sizes, breakpoint font sizes are based on these.
 $text-size-0-base : 40;
-$text-size-1-base : 32;
+$text-size-1-base : 34;
 $text-size-2-base : 28;
 $text-size-3-base : 24;
 $text-size-4-base : 20;
 $text-size-5-base : 18;
-$text-size-6-base : 16;
+$text-size-6-base : 16; // Same as the default font size.
 
 $text-scale-small : 1;
-$text-scale-med   : 1.25;
-$text-scale-large : 1.5;
+$text-scale-med   : 1.5;
+$text-scale-large : 1.75;
 
+$line-height-modifier : 1.1;
+
+// FIXME - This could all be a bit DRY-er if it were a mixin,
+// rather than lots of repeated blocks. Same output, just one
+// thing to change, rather than six...
 
 // Oversized utility class 
 .u-text-size-0 {
 
   // font-size mixin takes 2 variables, size and line-height.
   // default font-size and scale, plus line height at +10%
-  @include font-size( floor($text-size-0-base * $text-scale-small), floor($text-size-0-base * ($text-scale-small * 1.1) ) );
+  @include font-size( floor($text-size-0-base * $text-scale-small), floor($text-size-0-base * ($text-scale-small * $line-height-modifier) ) );
 
   @media all and (min-width: $bp-med) {
     // medium font-size and scale, plus line height at +10%
-     @include font-size( floor($text-size-0-base * $text-scale-med), floor($text-size-0-base * ($text-scale-med * 1.1) ) );
+     @include font-size( floor($text-size-0-base * $text-scale-med), floor($text-size-0-base * ($text-scale-med * $line-height-modifier) ) );
   }
   @media all and (min-width: $bp-large) {
     // large font-size and scale, plus line height at +10%
-    @include font-size( floor($text-size-0-base * $text-scale-large), floor($text-size-0-base * ($text-scale-large * 1.1) ) );
+    @include font-size( floor($text-size-0-base * $text-scale-large), floor($text-size-0-base * ($text-scale-large * $line-height-modifier) ) );
   }
 
 }
 
 h1, .u-text-size-1 {
 
-    @include font-size( floor($text-size-1-base * $text-scale-small), floor($text-size-1-base * ($text-scale-small * 1.1) ) );
+    @include font-size( floor($text-size-1-base * $text-scale-small), floor($text-size-1-base * ($text-scale-small * $line-height-modifier) ) );
 
     @media all and (min-width: $bp-med) {
-       @include font-size( floor($text-size-1-base * $text-scale-med), floor($text-size-1-base * ($text-scale-med * 1.1) ) );
+       @include font-size( floor($text-size-1-base * $text-scale-med), floor($text-size-1-base * ($text-scale-med * $line-height-modifier) ) );
     }
     @media all and (min-width: $bp-large) {
-      @include font-size( floor($text-size-1-base * $text-scale-large), floor($text-size-1-base * ($text-scale-large * 1.1) ) );
+      @include font-size( floor($text-size-1-base * $text-scale-large), floor($text-size-1-base * ($text-scale-large * $line-height-modifier) ) );
     }
 
 }
 
 h2, .u-text-size-2 {
 
-    @include font-size( floor($text-size-2-base * $text-scale-small), floor($text-size-2-base * ($text-scale-small * 1.1) ) );
+    @include font-size( floor($text-size-2-base * $text-scale-small), floor($text-size-2-base * ($text-scale-small * $line-height-modifier) ) );
 
     @media all and (min-width: $bp-med) {
-       @include font-size( floor($text-size-2-base * $text-scale-med), floor($text-size-2-base * ($text-scale-med * 1.1) ) );
+      // Scale modifier is increased (hX^X/100), and taken from modifier, as we go down
+      // so that size scales up exponentially. Ish.
+      $font-size-2-med: floor($text-size-2-base * ($text-scale-med - ((2*2)/100) ));
+      @include font-size( $font-size-2-med, ($font-size-2-med * $line-height-modifier));
     }
     @media all and (min-width: $bp-large) {
-      @include font-size( floor($text-size-2-base * $text-scale-large), floor($text-size-2-base * ($text-scale-large * 1.1) ) );
+      $font-size-2-large: floor($text-size-2-base * ($text-scale-large - ((2*2)/100) ));
+      @include font-size( $font-size-2-large, ($font-size-2-large * $line-height-modifier));
     }
 
 }
 
 h3, .u-text-size-3 {
 
-    @include font-size( floor($text-size-3-base * $text-scale-small), floor($text-size-3-base * ($text-scale-small * 1.1) ) );
+    @include font-size( floor($text-size-3-base * $text-scale-small), floor($text-size-3-base * ($text-scale-small * $line-height-modifier) ) );
 
     @media all and (min-width: $bp-med) {
-       @include font-size( floor($text-size-3-base * $text-scale-med), floor($text-size-3-base * ($text-scale-med * 1.1) ) );
+      $font-size-3-med: floor($text-size-3-base * ($text-scale-med - ((3*3)/100) ));
+      @include font-size( $font-size-3-med, ($font-size-3-med * $line-height-modifier));
     }
     @media all and (min-width: $bp-large) {
-      @include font-size( floor($text-size-3-base * $text-scale-large), floor($text-size-3-base * ($text-scale-large * 1.1) ) );
+      $font-size-3-large: floor($text-size-3-base * ($text-scale-large - ((3*3)/100) ));
+      @include font-size( $font-size-3-large, ($font-size-3-large * $line-height-modifier));
     }
 
 }
 
 h4, .u-text-size-4 {
 
-    @include font-size( floor($text-size-4-base * $text-scale-small), floor($text-size-4-base * ($text-scale-small * 1.1) ) );
+    @include font-size( floor($text-size-4-base * $text-scale-small), floor($text-size-4-base * ($text-scale-small * $line-height-modifier) ) );
 
     @media all and (min-width: $bp-med) {
-       @include font-size( floor($text-size-4-base * $text-scale-med), floor($text-size-4-base * ($text-scale-med * 1.1) ) );
+      $font-size-4-med: floor($text-size-4-base * ($text-scale-med - ((4*4)/100) ));
+      @include font-size( $font-size-4-med, ($font-size-4-med * $line-height-modifier));
     }
     @media all and (min-width: $bp-large) {
-      @include font-size( floor($text-size-4-base * $text-scale-large), floor($text-size-4-base * ($text-scale-large * 1.1) ) );
+      $font-size-4-large: floor($text-size-4-base * ($text-scale-large - ((4*4)/100) ));
+      @include font-size( $font-size-4-large, ($font-size-4-large * $line-height-modifier));
     }
 
 }
 
 h5, .u-text-size-5 {
 
-    @include font-size( floor($text-size-5-base * $text-scale-small), floor($text-size-5-base * ($text-scale-small * 1.1) ) );
+    @include font-size( floor($text-size-5-base * $text-scale-small), floor($text-size-5-base * ($text-scale-small * $line-height-modifier) ) );
 
     @media all and (min-width: $bp-med) {
-       @include font-size( floor($text-size-5-base * $text-scale-med), floor($text-size-5-base * ($text-scale-med * 1.1) ) );
+      $font-size-5-med: floor($text-size-5-base * ($text-scale-med - ((5*5)/100) ));
+      @include font-size( $font-size-5-med, ($font-size-5-med * $line-height-modifier));
     }
     @media all and (min-width: $bp-large) {
-      @include font-size( floor($text-size-5-base * $text-scale-large), floor($text-size-5-base * ($text-scale-large * 1.1) ) );
+      // Bit of a fudge here, to bring the size down nearer to <h6>
+      $font-size-5-large: floor($text-size-5-base * ($text-scale-large - ((6*6)/100) ));
+      @include font-size( $font-size-5-large, ($font-size-5-large * $line-height-modifier));
     }
 
 }
 
-h6, .u-text-size-6 {
 
-    @include font-size( floor($text-size-6-base * $text-scale-small), floor($text-size-6-base * ($text-scale-small * 1.1) ) );
+// <h6> should always be the same size as the default body copy
+// (unless modified by the classes above).
+h6 {
+
+    @include font-size( $text-size-6-base, floor($text-size-6-base * $line-height-modifier) );
 
     @media all and (min-width: $bp-med) {
-       @include font-size( floor($text-size-6-base * $text-scale-med), floor($text-size-6-base * ($text-scale-med * 1.1) ) );
+       @include font-size( $text-size-6-base, floor($text-size-6-base * $line-height-modifier) );
     }
     @media all and (min-width: $bp-large) {
-      @include font-size( floor($text-size-6-base * $text-scale-large), floor($text-size-6-base * ($text-scale-large * 1.1) ) );
+      @include font-size( $text-size-6-base, floor($text-size-6-base * $line-height-modifier) );
     }
 
 }

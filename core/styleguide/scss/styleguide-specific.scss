@@ -62,7 +62,7 @@ $animate-quick: 0.2s;
 
 
 // Style Guide color swatches
-.sg-colors {
+.sg-colors, .sg-icons {
 	overflow: hidden;
   list-style-type: none;
   margin: 0;
@@ -70,31 +70,43 @@ $animate-quick: 0.2s;
 
 	li {
 		overflow: hidden;
-    height: 320px; // Since everything has the same content, this is an acceptable clean way to ensure float clears.
+    margin: 0 1% 20px 1%;
 
     @media all and (min-width: $sg-bp-small-2) {
       float: left;
       width: 48%;
-      margin: 1%;
     }
     @media all and (min-width: $sg-bp-med) {
       width: 31%;
-      margin: 1%;
+       margin: 0 1% 30px 1%;
     }
     @media all and (min-width: $sg-bp-large) {
       width: 23%;
-      margin: 1%;
+       margin: 0 1% 40px 1%;
     }
 		@media all and (min-width: $sg-bp-xl) {
 			width: 18%;
-      margin: 1%;
 		}
 	}
 
+
   dl {
     text-transform: uppercase;
+
+    // Force the data not to wrap, and give it more space, 
+    // so everything stays the same hight, in this instance.
+    dd {
+      white-space: nowrap;
+      padding-left: 33%;
+    }
   }
 
+}
+
+.sg-icons {
+  dl {
+    text-transform: none;
+  }
 }
 
 .sg-swatch {
@@ -112,15 +124,24 @@ $animate-quick: 0.2s;
 		display: block;
 		@include vertical-align;
 	}
-
-	@media all and (min-width: $sg-bp-small-2) {
-
-	}
-
-	@media all and (min-width: $sg-bp-small-2) {
-
-	}
 	
+}
+
+  .sg-swatch--minor {
+    height: 1.5em;
+    width: 100%;
+    margin: 0;
+    @include border-radius(0);
+  }
+
+.sg-icon {
+  display: block;
+
+  span {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+  }
 }
 
 .sg-label {
@@ -128,10 +149,12 @@ $animate-quick: 0.2s;
 }
 
 .sg-main {
-  padding: 10px;
+  padding: 20px;
 
   @media all and (min-width: $sg-bp-med) {
-    padding: 20px;
+  }
+
+  @media all and (min-width: $sg-bp-large) {
   }
 
 }

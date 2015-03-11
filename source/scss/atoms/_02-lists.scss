@@ -10,6 +10,11 @@ ol, ul {
 
 }
 
+.list--plain {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 .list--icons {
   list-style-type: none;
 
