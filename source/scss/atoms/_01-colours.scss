@@ -61,7 +61,7 @@ $clooney_shade_20pc  : shade(#767676, 80%);
 .colour-ken--tint-20pc      { color: $ken_tint_20pc; }
 .colour-ken--shade-60pc     { color: $ken_shade_60pc; }
 .colour-ken--shade-20pc     { color: $ken_shade_20pc; }
-.background-ken             { background: $ken; }
+.background-ken             { background: $ken; color:$white; }
 .background-ken--tint-60pc  { background: $ken_tint_60pc; }
 .background-ken--tint-20pc  { background: $ken_tint_20pc; }
 
@@ -71,7 +71,7 @@ $clooney_shade_20pc  : shade(#767676, 80%);
 .colour-hucknall--tint-20pc      { color: $hucknall_tint_20pc; }
 .colour-hucknall--shade-60pc     { color: $hucknall_shade_60pc; }
 .colour-hucknall--shade-20pc     { color: $hucknall_shade_20pc; }
-.background-hucknall             { background: $hucknall; }
+.background-hucknall             { background: $hucknall; color:$white; }
 .background-hucknall--tint-60pc  { background: $hucknall_tint_60pc; }
 .background-hucknall--tint-20pc  { background: $hucknall_tint_20pc; }
 
@@ -80,7 +80,7 @@ $clooney_shade_20pc  : shade(#767676, 80%);
 .colour-barbie--tint-20pc      { color: $barbie_tint_20pc; }
 .colour-barbie--shade-60pc     { color: $barbie_shade_60pc; }
 .colour-barbie--shade-20pc     { color: $barbie_shade_20pc; }
-.background-barbie             { background: $barbie; }
+.background-barbie             { background: $barbie; color:$white; }
 .background-barbie--tint-60pc  { background: $barbie_tint_60pc; }
 .background-barbie--tint-20pc  { background: $barbie_tint_20pc; }
 
@@ -89,7 +89,7 @@ $clooney_shade_20pc  : shade(#767676, 80%);
 .colour-prince--tint-20pc      { color: $prince_tint_20pc; }
 .colour-prince--shade-60pc     { color: $prince_shade_60pc; }
 .colour-prince--shade-20pc     { color: $prince_shade_20pc; }
-.background-prince             { background: $prince; }
+.background-prince             { background: $prince; color:$white; }
 .background-prince--tint-60pc  { background: $prince_tint_60pc; }
 .background-prince--tint-20pc  { background: $prince_tint_20pc; }
 
@@ -98,7 +98,7 @@ $clooney_shade_20pc  : shade(#767676, 80%);
 .colour-maggie--tint-20pc      { color: $maggie_tint_20pc; }
 .colour-maggie--shade-60pc     { color: $maggie_shade_60pc; }
 .colour-maggie--shade-20pc     { color: $maggie_shade_20pc; }
-.background-maggie             { background: $maggie; }
+.background-maggie             { background: $maggie; color:$white; }
 .background-maggie--tint-60pc  { background: $maggie_tint_60pc; }
 .background-maggie--tint-20pc  { background: $maggie_tint_20pc; }
 
@@ -107,7 +107,7 @@ $clooney_shade_20pc  : shade(#767676, 80%);
 .colour-kermit--tint-20pc      { color: $kermit_tint_20pc; }
 .colour-kermit--shade-60pc     { color: $kermit_shade_60pc; }
 .colour-kermit--shade-20pc     { color: $kermit_shade_20pc; }
-.background-kermit             { background: $kermit; }
+.background-kermit             { background: $kermit; color:$white; }
 .background-kermit--tint-60pc  { background: $kermit_tint_60pc; }
 .background-kermit--tint-20pc  { background: $kermit_tint_20pc; }
 
@@ -116,7 +116,7 @@ $clooney_shade_20pc  : shade(#767676, 80%);
 .colour-hulk--tint-20pc  { color: $hulk_tint_20pc; }
 .colour-hulk--shade-60pc { color: $hulk_shade_60pc; }
 .colour-hulk--shade-20pc { color: $hulk_shade_20pc; }
-.background-hulk             { background: $hulk; }
+.background-hulk             { background: $hulk; color:$white; }
 .background-hulk--tint-60pc  { background: $hulk_tint_60pc; }
 .background-hulk--tint-20pc  { background: $hulk_tint_20pc; }
 
@@ -125,7 +125,7 @@ $clooney_shade_20pc  : shade(#767676, 80%);
 .colour-clooney--tint-20pc  { color: $clooney_tint_20pc; }
 .colour-clooney--shade-60pc { color: $clooney_shade_60pc; }
 .colour-clooney--shade-20pc { color: $clooney_shade_20pc; }
-.background-clooney             { background: $clooney; }
+.background-clooney             { background: $clooney; color:$white; }
 .background-clooney--tint-60pc  { background: $clooney_tint_60pc; }
 .background-clooney--tint-20pc  { background: $clooney_tint_20pc; }
 
@@ -134,6 +134,6 @@ $clooney_shade_20pc  : shade(#767676, 80%);
 .colour-vader--tint-20pc  { color: $vader_tint_20pc; }
 // .colour-vader--shade-60pc { color: $vader_shade_60pc; }
 // .colour-vader--shade-20pc { color: $vader_shade_20pc; }
-.background-vader             { background: $vader; }
+.background-vader             { background: $vader; color:$white; }
 .background-vader--tint-60pc  { background: $vader_tint_60pc; }
 .background-vader--tint-20pc  { background: $vader_tint_20pc; }
