@@ -15,6 +15,31 @@ ol, ul {
   padding-left: 0;
 }
 
+.list--links {
+  @extend .list--plain;
+
+  border-top: 1px solid $clooney_tint_20pc;
+
+  li {
+    border-bottom: 1px solid $clooney_tint_20pc;
+    position: relative;
+    padding: 0 2em 0 1em;
+  }
+
+  a {
+    display: block;
+    padding: 0.8em 0 0.75em 0; // Less bottom padding so baseline sits in the middle better.
+
+    &:before {
+      position: absolute;
+      right: 1em;
+      top: 50%;
+      margin-top: -0.5em;
+    }
+  }
+
+}
+
 .list--icons {
   list-style-type: none;
 
@@ -23,7 +48,6 @@ ol, ul {
   }
 
   li:before {
-    font-family: "h3g-icons";
     float: left;
     width: 1.75em;
   }  

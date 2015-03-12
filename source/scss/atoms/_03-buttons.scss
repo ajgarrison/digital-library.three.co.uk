@@ -1,15 +1,174 @@
 // Buttons.
 .button {
   display: inline-block;
-  line-height: 1;
   padding: 0.8em 1.5em 0.7em 1.5em;
   border: 0;
   font-weight: bold;
   transition: all 0.3s ease 0s;
+  line-height: inherit; // Fixes and override in normalise.scss for FF4 issues.
 
-    &:hover {
+    &:hover, &:focus {
       background: $black;
-      color: $white;  
+      color: $white;
     }
 
+    // Icons within a button. Icons *always* sit on the left of the text.
+    i {
+      padding: 0 0.25em 0 0;
+    }
+
+  }
+
+  .button--full {
+    width: 100%;
+  }
+
+
+  // Standard coloured buttons just taken on the .button properties
+  // but change the background from the colour classes set in _01-colours.scss
+  // FIXME - these could be made DRY-er with a mixin
+  .button--ken {
+    @extend .button;
+    @extend .background-ken;
+  }
+  .button--hucknall {
+    @extend .button;
+    @extend .background-hucknall;
+  }
+  .button--barbie {
+    @extend .button;
+    @extend .background-barbie;
+  }
+  .button--prince {
+    @extend .button;
+    @extend .background-prince;
+  }
+  .button--maggie {
+    @extend .button;
+    @extend .background-maggie;
+  }
+  .button--kermit {
+    @extend .button;
+    @extend .background-kermit;
+  }
+  .button--hulk {
+    @extend .button;
+    @extend .background-hulk;
+  }
+  .button--clooney {
+    @extend .button;
+    @extend .background-clooney;
+  }
+  .button--vader {
+    @extend .button;
+    @extend .background-vader;
+  }
+
+  // 'Ghost buttons' need a few more things resetting by default, 
+  // and per colour type, as color:; on a 'normal' button is mostly always white.
+  .button--ghost {
+    @extend .button;
+
+    background: transparent;
+    color: $white;
+    box-shadow: inset 0 0 0 2px currentColor;
+
+    &:hover, &:focus {
+      background: $white;
+      box-shadow: none;
+      color: $black;
+    }
+  }
+
+
+  // FIXME - these could be made DRY-er with a mixin
+  .button--ken--ghost {
+    @extend .button--ghost;
+
+    color: $ken;
+
+    &:hover, &:focus {
+      background: $ken;
+      color: $white;
+    }
+  }
+  .button--hucknall--ghost {
+    @extend .button--ghost;
+
+    color: $hucknall;
+
+    &:hover, &:focus {
+      background: $hucknall;
+      color: $white;
+    }
+  }
+  .button--barbie--ghost {
+    @extend .button--ghost;
+
+    color: $barbie;
+
+    &:hover, &:focus {
+      background: $barbie;
+      color: $white;
+    }
+  }
+  .button--prince--ghost {
+    @extend .button--ghost;
+
+    color: $prince;
+
+    &:hover, &:focus {
+      background: $prince;
+      color: $white;
+    }
+  }
+  .button--maggie--ghost {
+    @extend .button--ghost;
+
+    color: $maggie;
+
+    &:hover, &:focus {
+      background: $maggie;
+      color: $white;
+    }
+  }
+  .button--kermit--ghost {
+    @extend .button--ghost;
+
+    color: $kermit;
+
+    &:hover, &:focus {
+      background: $kermit;
+      color: $white;
+    }
+  }
+  .button--hulk--ghost {
+    @extend .button--ghost;
+
+    color: $hulk;
+
+    &:hover, &:focus {
+      background: $hulk;
+      color: $white;
+    }
+  }
+  .button--clooney--ghost {
+    @extend .button--ghost;
+
+    color: $clooney;
+
+    &:hover, &:focus {
+      background: $clooney;
+      color: $white;
+    }
+  }
+  .button--vader--ghost {
+    @extend .button--ghost;
+
+    color: $vader;
+
+    &:hover, &:focus {
+      background: $vader;
+      color: $white;
+    }
   }
