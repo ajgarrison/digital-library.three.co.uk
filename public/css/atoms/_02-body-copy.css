@@ -1,0 +1,66 @@
+/*
+Error: Undefined mixin 'font-size'.
+        on line 5 of _02-body-copy.scss, in `font-size'
+        from line 5 of _02-body-copy.scss
+
+1: // Body copy.
+2: // Default is 1.6em / 16px, with a line-height of 1.5
+3: 
+4: .u-text-size-small {
+5:   @include font-size(13);
+6: }
+7: 
+8: // <small>, FYI, doesn't inherit line-height properly, unless you make it inline-block, which screws with much more, most of the time.
+
+Backtrace:
+_02-body-copy.scss:5:in `font-size'
+_02-body-copy.scss:5
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:338:in `block in visit_mixin'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:98:in `block in with_mixin'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:98:in `with_mixin'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:336:in `visit_mixin'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/Prepros.app/Contents/Resources/app/ruby/ruby_gems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+/Applications/Prepros.app/Contents/Resources/app/ruby/loader.rb:15:in `load'
+/Applications/Prepros.app/Contents/Resources/app/ruby/loader.rb:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'font-size'.\A         on line 5 of _02-body-copy.scss, in `font-size'\A         from line 5 of _02-body-copy.scss\A \A 1: // Body copy.\A 2: // Default is 1.6em / 16px, with a line-height of 1.5\A 3: \A 4: .u-text-size-small {\A 5:   @include font-size(13);\A 6: }\A 7: \A 8: // <small>, FYI, doesn't inherit line-height properly, unless you make it inline-block, which screws with much more, most of the time."; }

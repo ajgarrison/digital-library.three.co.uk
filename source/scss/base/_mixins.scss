@@ -4,10 +4,10 @@
 // }
 // Better font-size mixin from https://coderwall.com/p/ml9zxg/sass-mixin-for-rem-font-sizing-line-height-with-px-fallback
 @mixin font-size($fontsize: 16, $lineheight: $fontsize * 1.5) {
-    font-size: ($fontsize) + px;
-    line-height: ($lineheight) + px;
-    font-size: ($fontsize / 10) + rem;
-    line-height: ($lineheight / 10) + rem;
+  font-size: ($fontsize) + px;
+  line-height: ($lineheight) + px;
+  font-size: ($fontsize / 10) + rem;
+  line-height: ($lineheight / 10) + rem; 
 }
 
 

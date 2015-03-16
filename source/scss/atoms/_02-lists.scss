@@ -23,18 +23,22 @@ ol, ul {
   li {
     border-bottom: 1px solid $clooney_tint_20pc;
     position: relative;
-    padding: 0 2em 0 1em;
   }
 
   a {
     display: block;
-    padding: 0.8em 0 0.75em 0; // Less bottom padding so baseline sits in the middle better.
+    padding: 0.8em 2em 0.75em 1em; // Less bottom padding so baseline sits in the middle better.
+    text-decoration: none;
+    transition: all 0.3s ease 0s; // Should this transition time/type be a variable so it's consistent everywhere? Used in buttons.scss too.
 
     &:before {
       position: absolute;
       right: 1em;
       top: 50%;
       margin-top: -0.5em;
+    }
+    &:hover {
+      background: $clooney_tint_20pc;
     }
   }
 

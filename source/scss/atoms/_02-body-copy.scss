@@ -1,1 +1,8 @@
 // Body copy.
+// Default is 1.6em / 16px, with a line-height of 1.5
+
+.u-text-size-small {
+  @include font-size(13);
+}
+
+// <small>, FYI, doesn't inherit line-height properly, unless you make it inline-block, which screws with much more, most of the time.

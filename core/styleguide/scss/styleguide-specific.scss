@@ -128,7 +128,7 @@ $animate-quick: 0.2s;
 }
 
   .sg-swatch--minor {
-    height: 1.5em;
+    height: 1.6em; // Same as the base line-height for the size, otherwise it doesn't clear.
     width: 100%;
     margin: 0;
     @include border-radius(0);
