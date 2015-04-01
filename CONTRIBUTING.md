@@ -13,7 +13,6 @@ In order to help us collaborate here are the guidelines we'd like you to follow 
 ## <a name="started"></a> Getting Started
 
 * Make sure you have a [GitHub account](https://github.com/signup/free)
-* Fork the repository on GitHub
 
 ## <a name="issue"></a> Found an Issue?
 If you find a bug in the source code or a mistake in the documentation, you can help us by
