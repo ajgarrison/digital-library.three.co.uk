@@ -28,29 +28,45 @@
 			
 			<!-- Patterns -->
 			<div id="sg-patterns">
-					<div id="atoms-video" class="sg-pattern">
-						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-media-00-video/00-atoms-06-media-00-video.html" class="patternLink" data-patternpartial="atoms-video">Video</a></h2>
+					<div id="molecules-lists" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/01-molecules-00-typography-00-lists/01-molecules-00-typography-00-lists.html" class="patternLink" data-patternpartial="molecules-lists">Lists</a></h2>
 						<div class="sg-pattern-body">
-							Video embeds
+							<!-- Icon list -->
+<ul class="list--icons">
+  <li class="icon-pound-circle">A list item with an icon.</li>
+  <li class="icon-checkbox-tick">A list item with an icon.</li>
+  <li class="icon-phone-download">A list item with an icon with a long piece of text next to it so you can see how it wraps.</li>
+  <li class="icon-apple">A list item with an icon.</li>
+</ul>
+
+<!-- Links list -->
+<ul class="list--links">
+  <li><a href="#" class="icon-chevron-right-thin">Apple</a></li>
+  <li><a href="#" class="icon-chevron-right-thin">Banana</a></li>
+  <li><a href="#" class="icon-chevron-right-thin">Orange</a></li>
+  <li><a href="#" class="icon-chevron-right-thin">Pear</a></li>
+</ul>
+
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										Video embeds
-									</code>
-								</pre>
-							</div>
-						</div>
-					</div>
-					<div id="atoms-audio" class="sg-pattern">
-						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-media-01-audio/00-atoms-06-media-01-audio.html" class="patternLink" data-patternpartial="atoms-audio">Audio</a></h2>
-						<div class="sg-pattern-body">
-							Audio
-							<div class="sg-code" style="display: none">
-								<h3 class="sg-code-head">HTML</h3>
-								<pre class="sg-code-html">
-									<code>
-										Audio
+										&lt;!-- Icon list --&gt;
+&lt;ul class=&quot;list--icons&quot;&gt;
+  &lt;li class=&quot;icon-pound-circle&quot;&gt;A list item with an icon.&lt;/li&gt;
+  &lt;li class=&quot;icon-checkbox-tick&quot;&gt;A list item with an icon.&lt;/li&gt;
+  &lt;li class=&quot;icon-phone-download&quot;&gt;A list item with an icon with a long piece of text next to it so you can see how it wraps.&lt;/li&gt;
+  &lt;li class=&quot;icon-apple&quot;&gt;A list item with an icon.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Links list --&gt;
+&lt;ul class=&quot;list--links&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon-chevron-right-thin&quot;&gt;Apple&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon-chevron-right-thin&quot;&gt;Banana&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon-chevron-right-thin&quot;&gt;Orange&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;icon-chevron-right-thin&quot;&gt;Pear&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 									</code>
 								</pre>
 							</div>
@@ -63,7 +79,7 @@
 		<!-- JS to hook everything together and do annotations -->
 		<script>
 			// handle injection of items from PHP
-			var patternPartial = "viewall-atoms-media";
+			var patternPartial = "viewall-molecules-typography";
 			var lineage = "";
 		</script>
 		

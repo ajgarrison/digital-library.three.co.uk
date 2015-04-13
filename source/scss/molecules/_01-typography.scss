@@ -1,0 +1,44 @@
+// Typo Molecules
+
+.list--links {
+  @extend .list--plain;
+
+  border-top: 1px solid $clooney_tint_20pc;
+
+  li {
+    border-bottom: 1px solid $clooney_tint_20pc;
+    position: relative;
+  }
+
+  a {
+    display: block;
+    padding: 0.8em 2em 0.75em 1em; // Less bottom padding so baseline sits in the middle better.
+    text-decoration: none;
+    transition: all 0.3s ease 0s; // Should this transition time/type be a variable so it's consistent everywhere? Used in buttons.scss too.
+
+    &:before {
+      position: absolute;
+      right: 1em;
+      top: 50%;
+      margin-top: -0.5em;
+    }
+    &:hover {
+      background: $clooney_tint_20pc;
+    }
+  }
+
+}
+
+.list--icons {
+  list-style-type: none;
+
+  li {
+    text-indent: -1.75em;
+  }
+
+  li:before {
+    float: left;
+    width: 1.75em;
+  }  
+
+}

@@ -12,6 +12,7 @@ h6 {
 
 
 // Base sizes, breakpoint font sizes are based on these.
+$text-size-000-base : 64;
 $text-size-0-base : 40;
 $text-size-1-base : 34;
 $text-size-2-base : 28;
@@ -24,25 +25,38 @@ $text-scale-small : 1;
 $text-scale-med   : 1.5;
 $text-scale-large : 1.75;
 
-$line-height-modifier : 1.4;
+$line-height-modifier : 1.25;
 
 // FIXME - This could all be a bit DRY-er if it were a mixin,
 // rather than lots of repeated blocks. Same output, just one
 // thing to change, rather than six...
 
-// Oversized utility class 
-.u-text-size-0 {
+// Ultra oversized utility class 
+.u-text-size-000 {
 
   // font-size mixin takes 2 variables, size and line-height.
   // default font-size and scale, plus line height at +10%
-  @include font-size( floor($text-size-0-base * $text-scale-small), floor($text-size-0-base * ($text-scale-small * $line-height-modifier) ) );
+  @include font-size( floor($text-size-000-base * $text-scale-small), floor($text-size-000-base * ($text-scale-small * $line-height-modifier) ) );
 
   @media all and (min-width: $bp-med) {
     // medium font-size and scale, plus line height at +10%
-     @include font-size( floor($text-size-0-base * $text-scale-med), floor($text-size-0-base * ($text-scale-med * $line-height-modifier) ) );
+     @include font-size( floor($text-size-000-base * $text-scale-med), floor($text-size-000-base * ($text-scale-med * $line-height-modifier) ) );
   }
   @media all and (min-width: $bp-large) {
     // large font-size and scale, plus line height at +10%
+    @include font-size( floor($text-size-000-base * $text-scale-large), floor($text-size-000-base * ($text-scale-large * $line-height-modifier) ) );
+  }
+
+}
+// Oversized utility class 
+.u-text-size-0 {
+
+  @include font-size( floor($text-size-0-base * $text-scale-small), floor($text-size-0-base * ($text-scale-small * $line-height-modifier) ) );
+
+  @media all and (min-width: $bp-med) {
+     @include font-size( floor($text-size-0-base * $text-scale-med), floor($text-size-0-base * ($text-scale-med * $line-height-modifier) ) );
+  }
+  @media all and (min-width: $bp-large) {
     @include font-size( floor($text-size-0-base * $text-scale-large), floor($text-size-0-base * ($text-scale-large * $line-height-modifier) ) );
   }
 
