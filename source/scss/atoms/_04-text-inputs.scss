@@ -1,1 +1,38 @@
 // Text inputs.
+
+// Inputs without a type are assumed to be treated like text.
+input:not([type]), 
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid $vader;
+
+  &:active,
+  &:focus {
+    border: 1px solid $maggie;
+    box-shadow: inset 0px 0px 0px 1px $maggie;
+  }
+}
+
+// Read only input fields
+input[readonly], input[readonly="readonly"] {
+  background: $clooney_tint_20pc;
+  cursor: no-drop;
+
+  &:active,
+  &:focus {
+    border: 1px solid $vader;
+    box-shadow: inset 0px 0px 0px 0px $vader;
+  } 
+}
+
+// Placeholder style
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {  
+   color: $clooney_tint_20pc;
+}

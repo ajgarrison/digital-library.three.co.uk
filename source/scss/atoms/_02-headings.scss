@@ -141,7 +141,7 @@ h5, .u-text-size-5 {
 
 // <h6> should always be the same size as the default body copy
 // (unless modified by the classes above).
-h6 {
+h6, .u-text-size-6 {
 
     @include font-size( $text-size-6-base, floor($text-size-6-base * $line-height-modifier) );
 

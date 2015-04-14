@@ -1,0 +1,19 @@
+// Forms
+
+form {
+  margin-bottom: 1em;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.label-inline {
+  display: inline;
+  font-weight: normal;
+}

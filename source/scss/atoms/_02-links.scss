@@ -1,1 +1,122 @@
 // Links.
+
+a { 
+  text-decoration : underline;
+  color : $vader;
+  font-weight: bold;
+
+  &:visited { 
+    color : $clooney; 
+  }
+
+  &:hover, 
+  &:visited:hover { 
+    color : $vader; 
+  }
+
+  &:focus { 
+    outline : thin dotted; 
+    color : $vader; 
+  }
+
+  &:hover, 
+  &:active { 
+    outline : 0; 
+  }
+
+  @include transition(all 0.35s ease 0s)
+}
+
+
+// Colour variants.
+// FIXME - Mixin/function this with a list of names, rather than one at a time.
+
+a.ken {
+  color: $ken;
+
+  &:hover,
+  &:visited:hover {
+    color: $ken;
+  }
+}
+
+a.hucknall {
+  color: $hucknall;
+
+  &:hover,
+  &:visited:hover {
+    color: $hucknall;
+  }
+}
+
+a.barbie {
+  color: $barbie;
+
+  &:hover,
+  &:visited:hover {
+    color: $barbie;
+  }
+}
+
+a.prince {
+  color: $prince;
+
+  &:hover,
+  &:visited:hover {
+    color: $prince;
+  }
+}
+
+a.maggie {
+  color: $maggie;
+
+  &:hover,
+  &:visited:hover {
+    color: $maggie;
+  }
+}
+
+a.kermit {
+  color: $kermit;
+
+  &:hover,
+  &:visited:hover {
+    color: $kermit;
+  }
+}
+
+a.hulk {
+  color: $hulk;
+
+  &:hover,
+  &:visited:hover {
+    color: $hulk;
+  }
+}
+
+a.clooney {
+  color: $clooney;
+
+  &:hover,
+  &:visited:hover {
+    color: $clooney;
+  }
+}
+
+a.vader {
+  color: $vader;
+
+  &:hover,
+  &:visited:hover {
+    color: $vader;
+  }
+}
+
+a.barry {
+  color: $barry;
+
+  &:hover,
+  &:visited:hover {
+    color: $barry;
+  }
+}
