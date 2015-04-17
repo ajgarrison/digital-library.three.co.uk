@@ -144,6 +144,33 @@ $animate-quick: 0.2s;
   }
 }
 
+.sg-logos {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  figure{
+    width:50%;
+    margin:0 auto $sg-doublespace auto;
+
+    @media all and (min-width: $sg-bp-med) {
+      width:23%;
+      margin:0 5%;
+      display: block;
+      float: left;
+    }
+
+    @media all and (min-width: $sg-bp-large) {
+
+    }
+
+  }
+}
+
+
 .sg-label {
 	line-height: 1;
 }

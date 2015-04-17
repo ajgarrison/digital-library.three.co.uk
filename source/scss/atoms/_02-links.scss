@@ -29,94 +29,26 @@ a {
 
 
 // Colour variants.
-// FIXME - Mixin/function this with a list of names, rather than one at a time.
 
-a.ken {
-  color: $ken;
+// Function outputs something like this, with actual values rather than $variables, 
+// as SASS <3.3 doesn't support them, and maybe never will;
+//
+// a.ken {
+//   color: $ken;
+// 
+//   &:hover,
+//   &:visited:hover {
+//     color: $ken;
+//   }
+// }
 
-  &:hover,
-  &:visited:hover {
-    color: $ken;
+// $colours map is defined in _01-colours.scss
+@each $name in $colours {
+
+  a.#{nth($name, 1)} {
+
+    @extend %#{nth($name, 1)};
+
   }
-}
 
-a.hucknall {
-  color: $hucknall;
-
-  &:hover,
-  &:visited:hover {
-    color: $hucknall;
-  }
-}
-
-a.barbie {
-  color: $barbie;
-
-  &:hover,
-  &:visited:hover {
-    color: $barbie;
-  }
-}
-
-a.prince {
-  color: $prince;
-
-  &:hover,
-  &:visited:hover {
-    color: $prince;
-  }
-}
-
-a.maggie {
-  color: $maggie;
-
-  &:hover,
-  &:visited:hover {
-    color: $maggie;
-  }
-}
-
-a.kermit {
-  color: $kermit;
-
-  &:hover,
-  &:visited:hover {
-    color: $kermit;
-  }
-}
-
-a.hulk {
-  color: $hulk;
-
-  &:hover,
-  &:visited:hover {
-    color: $hulk;
-  }
-}
-
-a.clooney {
-  color: $clooney;
-
-  &:hover,
-  &:visited:hover {
-    color: $clooney;
-  }
-}
-
-a.vader {
-  color: $vader;
-
-  &:hover,
-  &:visited:hover {
-    color: $vader;
-  }
-}
-
-a.barry {
-  color: $barry;
-
-  &:hover,
-  &:visited:hover {
-    color: $barry;
-  }
 }

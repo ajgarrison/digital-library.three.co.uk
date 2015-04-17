@@ -12,6 +12,36 @@ $clooney  : #767676;
 $vader    : #000;
 $barry    : #fff;
 
+// Here for the link/buttons functions, will be integrated below later.
+// Dynamic variables don't exist yet, hence the value as a second attribute.
+$colours:
+  "ken" $ken,
+  "hucknall" $hucknall,
+  "barbie" $barbie,
+  "prince" $prince,
+  "maggie" $maggie,
+  "kermit" $kermit,
+  "hulk" $hulk,
+  "clooney" $clooney,
+  "vader" $vader,
+  "barry" $barry;
+
+// Silent named classes
+@each $name in $colours {
+
+  %#{nth($name, 1)} {
+    color: #{nth($name, 2)};
+
+    &:hover,
+    &:visited:hover {
+      color: #{nth($name, 2)};
+    }
+
+  }
+
+}
+
+
 // Tints.
 // Tint adds a percentage of white to a colour, so a 60% tint of a colour is that colour tinted with 40% white (where both values add up to 100%).
 $ken_tint_60pc      : tint(#ec0044, 40%);

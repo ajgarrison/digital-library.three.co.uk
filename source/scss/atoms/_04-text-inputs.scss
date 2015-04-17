@@ -5,9 +5,10 @@ input:not([type]),
 input[type="text"],
 input[type="email"],
 input[type="url"],
-input[type="password"] {
+input[type="password"],
+select {
   width: 100%;
-  padding: 0.75em;
+  padding: 0.85em 0.75em 0.65em 0.75em; // top/bottom are different to center text better.
   border: 1px solid $vader;
 
   &:active,

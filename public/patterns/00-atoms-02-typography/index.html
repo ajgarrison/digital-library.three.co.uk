@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width" />
 		
-		<link rel="stylesheet" href="../../css/style.css?1429028464" media="all" />
+		<link rel="stylesheet" href="../../css/style.css?1429279492" media="all" />
 
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
 				<!-- never cache patterns -->
@@ -15,8 +15,8 @@
 		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 		<meta http-equiv="pragma" content="no-cache" />
 		
-		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1429028464" media="all">
-		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1429028464" media="all" />
+		<link rel="stylesheet" href="../../styleguide/css/styleguide.css?1429279492" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/styleguide-specific.css?1429279492" media="all" />
 		
 
 		<!-- End Pattern Lab -->
@@ -32,13 +32,41 @@
 						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-02-typography-00-fonts/00-atoms-02-typography-00-fonts.html" class="patternLink" data-patternpartial="atoms-fonts">Fonts</a></h2>
 						<div class="sg-pattern-body">
 							<p>Primary font: "HelveticaNeue", "Helvetica", "Arial", sans-serif;</p>
+<p class="u-text-size-2">
+ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+abcdefghijklmnopqrstuvwxyz<br>
+1234567890!@£$%^&*()+=
+</p>
+
+
 <p><strong>Primary font bold: "HelveticaNeue", "Helvetica", "Arial", sans-serif;</strong></p>
+<p class="u-text-size-2">
+<strong>
+ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+abcdefghijklmnopqrstuvwxyz<br>
+1234567890!@£$%^&*()+=
+</strong>
+</p>
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
 										&lt;p&gt;Primary font: &quot;HelveticaNeue&quot;, &quot;Helvetica&quot;, &quot;Arial&quot;, sans-serif;&lt;/p&gt;
+&lt;p class=&quot;u-text-size-2&quot;&gt;
+ABCDEFGHIJKLMNOPQRSTUVWXYZ&lt;br&gt;
+abcdefghijklmnopqrstuvwxyz&lt;br&gt;
+1234567890!@&pound;$%^&amp;*()+=
+&lt;/p&gt;
+
+
 &lt;p&gt;&lt;strong&gt;Primary font bold: &quot;HelveticaNeue&quot;, &quot;Helvetica&quot;, &quot;Arial&quot;, sans-serif;&lt;/strong&gt;&lt;/p&gt;
+&lt;p class=&quot;u-text-size-2&quot;&gt;
+&lt;strong&gt;
+ABCDEFGHIJKLMNOPQRSTUVWXYZ&lt;br&gt;
+abcdefghijklmnopqrstuvwxyz&lt;br&gt;
+1234567890!@&pound;$%^&amp;*()+=
+&lt;/strong&gt;
+&lt;/p&gt;
 									</code>
 								</pre>
 							</div>
@@ -47,7 +75,9 @@
 					<div id="atoms-headings" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-02-typography-01-headings/00-atoms-02-typography-01-headings.html" class="patternLink" data-patternpartial="atoms-headings">Headings</a></h2>
 						<div class="sg-pattern-body">
-							<h1 class="u-text-size-000">Oversized font size 000.</h1>
+							<div role="typography-rules">
+
+<h1 class="u-text-size-000">Oversized font size 000.</h1>
 <h1 class="u-text-size-0">Oversized heading and font size level 0.</h1>
 <h1>Heading and font size level 1.</h1>
 <h2>Heading and font size level 2.</h2>
@@ -55,11 +85,15 @@
 <h4>Heading and font size level 4.</h4>
 <h5>Heading and font size level 5.</h5> 
 <h6>Heading size level 6.</h6>
+
+</div>
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;h1 class=&quot;u-text-size-000&quot;&gt;Oversized font size 000.&lt;/h1&gt;
+										&lt;div role=&quot;typography-rules&quot;&gt;
+
+&lt;h1 class=&quot;u-text-size-000&quot;&gt;Oversized font size 000.&lt;/h1&gt;
 &lt;h1 class=&quot;u-text-size-0&quot;&gt;Oversized heading and font size level 0.&lt;/h1&gt;
 &lt;h1&gt;Heading and font size level 1.&lt;/h1&gt;
 &lt;h2&gt;Heading and font size level 2.&lt;/h2&gt;
@@ -67,6 +101,8 @@
 &lt;h4&gt;Heading and font size level 4.&lt;/h4&gt;
 &lt;h5&gt;Heading and font size level 5.&lt;/h5&gt; 
 &lt;h6&gt;Heading size level 6.&lt;/h6&gt;
+
+&lt;/div&gt;
 									</code>
 								</pre>
 							</div>
@@ -75,7 +111,9 @@
 					<div id="atoms-body-copy" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-02-typography-02-body-copy/00-atoms-02-typography-02-body-copy.html" class="patternLink" data-patternpartial="atoms-body-copy">Body Copy</a></h2>
 						<div class="sg-pattern-body">
-							<p class="u-text-size-4">
+							<div role="typography-rules">
+
+<p class="u-text-size-4">
 Text size 4 copy. Nunc neque magna, tristique sit amet bibendum in, rhoncus sit amet risus. Integer accumsan tempus nunc at commodo. Donec quis lacinia tortor. Ut at velit ornare urna maximus iaculis. Nam scelerisque dignissim lectus porta vulputate. Suspendisse sed blandit lorem, eu imperdiet est. Quisque congue erat vel sem finibus, nec fermentum velit suscipit. 
 </p>
 
@@ -94,11 +132,15 @@ Nunc neque magna, tristique sit amet bibendum in, rhoncus sit amet risus. Intege
 <p class="u-text-size-small">
 Text size small copy. In sed neque vitae sem malesuada consectetur. Aliquam sed tempor diam, vel finibus nisi. Fusce auctor nisl sed tortor varius porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce nunc nisi, consequat vitae volutpat vel, molestie id lorem. Fusce non vehicula nisi. Integer hendrerit ut tortor eu imperdiet. Nullam in tellus nec libero efficitur dignissim. Ut nec diam quis ante vestibulum malesuada. Maecenas ac mattis nibh.
 </p>
+
+</div>
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;p class=&quot;u-text-size-4&quot;&gt;
+										&lt;div role=&quot;typography-rules&quot;&gt;
+
+&lt;p class=&quot;u-text-size-4&quot;&gt;
 Text size 4 copy. Nunc neque magna, tristique sit amet bibendum in, rhoncus sit amet risus. Integer accumsan tempus nunc at commodo. Donec quis lacinia tortor. Ut at velit ornare urna maximus iaculis. Nam scelerisque dignissim lectus porta vulputate. Suspendisse sed blandit lorem, eu imperdiet est. Quisque congue erat vel sem finibus, nec fermentum velit suscipit. 
 &lt;/p&gt;
 
@@ -117,6 +159,8 @@ Nunc neque magna, tristique sit amet bibendum in, rhoncus sit amet risus. Intege
 &lt;p class=&quot;u-text-size-small&quot;&gt;
 Text size small copy. In sed neque vitae sem malesuada consectetur. Aliquam sed tempor diam, vel finibus nisi. Fusce auctor nisl sed tortor varius porttitor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce nunc nisi, consequat vitae volutpat vel, molestie id lorem. Fusce non vehicula nisi. Integer hendrerit ut tortor eu imperdiet. Nullam in tellus nec libero efficitur dignissim. Ut nec diam quis ante vestibulum malesuada. Maecenas ac mattis nibh.
 &lt;/p&gt;
+
+&lt;/div&gt;
 									</code>
 								</pre>
 							</div>
@@ -3355,10 +3399,10 @@ Integer hendrerit ut tortor eu imperdiet. Nullam in tellus nec libero &lt;a href
 			
 		}
 	</script>
-	<script id="pl-js-polyfill-insert-1429028464">
+	<script id="pl-js-polyfill-insert-1429279492">
 		(function() {
 			if (self != top) {
-				var cb = '1429028464';
+				var cb = '1429279492';
 				var js = [];
 				if (typeof document !== "undefined" && !("classList" in document.documentElement)) {
 					js.push("styleguide/js/vendor/classlist-polyfill.js");
@@ -3367,10 +3411,10 @@ Integer hendrerit ut tortor eu imperdiet. Nullam in tellus nec libero &lt;a href
 			}
 		})();
 	</script>
-	<script id="pl-js-insert-1429028464">
+	<script id="pl-js-insert-1429279492">
 		(function() {
 			if (self != top) {
-				var cb = '1429028464';
+				var cb = '1429279492';
 				var js = [ { "src": "styleguide/js/vendor/jwerty.js", "dep": [ "styleguide/js/postmessage.js", { "src": "data/annotations.js", "dep": [ "styleguide/js/annotations-pattern.js" ] }, "styleguide/js/code-pattern.js" ] } ];
 				scriptLoader.run(js,cb,'pl-js-insert');
 			}

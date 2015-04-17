@@ -1,6 +1,7 @@
 // Buttons.
 .button {
-  display: inline-block;
+  display: block;
+  width: 100%;  // Buttons are always full width at the lowest breakpoint.
   padding: 0.8em 1.5em 0.7em 1.5em;
   border: 0;
   font-weight: bold;
@@ -12,7 +13,13 @@
       color: $white;
     }
 
+    @media only screen and (min-width: $bp-med) {
+      display: inline-block;
+      width: auto;
+    }
+
   }
+
 
   .button--full {
     width: 100%;
@@ -21,43 +28,23 @@
 
   // Standard coloured buttons just taken on the .button properties
   // but change the background from the colour classes set in _01-colours.scss
-  // FIXME - these could be made DRY-er with a mixin
-  .button--ken {
-    @extend .button;
-    @extend .background-ken;
+  // Outputs something like this;
+  // .button--ken {
+  //   @extend .button;
+  //   @extend .background-ken;
+  // }
+  // $colours map is defined in _01-colours.scss
+  @each $name in $colours {
+
+    .button--#{nth($name, 1)} {
+      @extend .button;
+      @extend .background-#{nth($name, 1)};
+
+    }
+
   }
-  .button--hucknall {
-    @extend .button;
-    @extend .background-hucknall;
-  }
-  .button--barbie {
-    @extend .button;
-    @extend .background-barbie;
-  }
-  .button--prince {
-    @extend .button;
-    @extend .background-prince;
-  }
-  .button--maggie {
-    @extend .button;
-    @extend .background-maggie;
-  }
-  .button--kermit {
-    @extend .button;
-    @extend .background-kermit;
-  }
-  .button--hulk {
-    @extend .button;
-    @extend .background-hulk;
-  }
-  .button--clooney {
-    @extend .button;
-    @extend .background-clooney;
-  }
-  .button--vader {
-    @extend .button;
-    @extend .background-vader;
-  }
+
+
 
   // 'Ghost buttons' need a few more things resetting by default, 
   // and per colour type, as color:; on a 'normal' button is mostly always white.
@@ -76,94 +63,28 @@
   }
 
 
-  // FIXME - these could be made DRY-er with a mixin
-  .button--ken--ghost {
-    @extend .button--ghost;
+  // Outputs something like this;
+  //
+  //  .button--ken--ghost {
+  //    @extend .button--ghost;
+  //
+  //    color: $ken;
+  //
+  //    &:hover, &:focus {
+  //      background: $ken;
+  //      color: $white;
+  //    }
+  //  }  
 
-    color: $ken;
+  @each $name in $colours {
 
-    &:hover, &:focus {
-      background: $ken;
-      color: $white;
+    .button--#{nth($name, 1)}--ghost {
+      @extend .button--ghost;
+      color: #{nth($name, 2)};
+      &:hover, &:focus {
+        background: #{nth($name, 2)};
+        color: $white;
+      }
     }
-  }
-  .button--hucknall--ghost {
-    @extend .button--ghost;
 
-    color: $hucknall;
-
-    &:hover, &:focus {
-      background: $hucknall;
-      color: $white;
-    }
-  }
-  .button--barbie--ghost {
-    @extend .button--ghost;
-
-    color: $barbie;
-
-    &:hover, &:focus {
-      background: $barbie;
-      color: $white;
-    }
-  }
-  .button--prince--ghost {
-    @extend .button--ghost;
-
-    color: $prince;
-
-    &:hover, &:focus {
-      background: $prince;
-      color: $white;
-    }
-  }
-  .button--maggie--ghost {
-    @extend .button--ghost;
-
-    color: $maggie;
-
-    &:hover, &:focus {
-      background: $maggie;
-      color: $white;
-    }
-  }
-  .button--kermit--ghost {
-    @extend .button--ghost;
-
-    color: $kermit;
-
-    &:hover, &:focus {
-      background: $kermit;
-      color: $white;
-    }
-  }
-  .button--hulk--ghost {
-    @extend .button--ghost;
-
-    color: $hulk;
-
-    &:hover, &:focus {
-      background: $hulk;
-      color: $white;
-    }
-  }
-  .button--clooney--ghost {
-    @extend .button--ghost;
-
-    color: $clooney;
-
-    &:hover, &:focus {
-      background: $clooney;
-      color: $white;
-    }
-  }
-  .button--vader--ghost {
-    @extend .button--ghost;
-
-    color: $vader;
-
-    &:hover, &:focus {
-      background: $vader;
-      color: $white;
-    }
   }

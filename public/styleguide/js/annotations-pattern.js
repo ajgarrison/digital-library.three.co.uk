@@ -79,6 +79,7 @@ var annotationsPattern = {
 		annotationDiv.classList.add("sg-annotation");
 		
 		var h3       = document.createElement("h3");
+		h3.className = "u-text-size-5";
 		var p        = document.createElement("p");
 		h3.innerHTML = title;
 		p.innerHTML  = comment;

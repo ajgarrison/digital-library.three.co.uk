@@ -6,3 +6,7 @@
 }
 
 // <small>, FYI, doesn't inherit line-height properly, unless you make it inline-block, which screws with much more, most of the time.
+
+p {
+  margin: 0 0 1em 0;
+}
