@@ -156,6 +156,11 @@ $animate-quick: 0.2s;
     width:50%;
     margin:0 auto $sg-doublespace auto;
 
+    img {
+      width: 100%;
+      height: auto;
+    }
+
     @media all and (min-width: $sg-bp-med) {
       width:23%;
       margin:0 5%;
