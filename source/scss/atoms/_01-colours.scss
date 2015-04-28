@@ -42,6 +42,23 @@ $colours:
 }
 
 
+// Colour and background variants
+// FIXME - some weird processing error prevents this from compiling.
+//
+// @each $name in $colours {
+//   .colour-#{nth($name, 1)}                { color: #{nth($name, 2)}; }
+//   .colour-#{nth($name, 1)}--tint-60pc     { color: mix( #{nth($name, 2)}, #fff, 60%); }
+//   .colour-#{nth($name, 1)}--tint-20pc     { color: mix( #{nth($name, 2)}, #fff, 20%); }
+//   .colour-#{nth($name, 1)}--shade-60pc    { color: mix( #{nth($name, 2)}, #fff, 60%); }
+//   .colour-#{nth($name, 1)}--shade-20pc    { color: mix( #{nth($name, 2)}, #fff, 20%); }
+//   .background-#{nth($name, 1)}            { background: #{nth($name, 2)}; color:$white; }
+//   .background-#{nth($name, 1)}--tint-60pc { background: mix( #{nth($name, 2)}, #fff, 60%); }
+//   .background-#{nth($name, 1)}--tint-20pc { background: mix( #{nth($name, 2)}, #fff, 20%); }  
+// }
+
+
+
+
 // Tints.
 // Tint adds a percentage of white to a colour, so a 60% tint of a colour is that colour tinted with 40% white (where both values add up to 100%).
 $ken_tint_60pc      : tint(#ec0044, 40%);
