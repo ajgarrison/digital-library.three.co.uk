@@ -1,9 +1,24 @@
 // Links.
 
 a { 
-  text-decoration : underline;
+  text-decoration : none;
   color : $vader;
   font-weight: bold;
+  border-bottom: 1px solid currentColor;
+  position: relative;
+
+  // This doesn't work when a link is wrapped on multiple lines. Does it matter?
+  &:after {
+    content: "";
+    position: absolute;    
+    width: 0;    
+    height: 0.125em; // This renders inconsistently at smaller decimal point sizes (e.g. 0.1) together with smaller font sizes.
+    background: currentColor;
+    left: 0;
+    bottom: 0;
+    @include transition(all 0.2s ease 0s); // Needs adding separately to pseudo elements, doesn't take on transition style from parent.
+
+  }
 
   &:visited { 
     color : $clooney; 
@@ -11,7 +26,12 @@ a {
 
   &:hover, 
   &:visited:hover { 
-    color : $vader; 
+    color : $vader;
+    text-decoration: none;
+    
+    &:after {
+      width: 100%;
+    }
   }
 
   &:focus { 
@@ -24,14 +44,25 @@ a {
     outline : 0;
   }
 
-  @include transition(all 0.35s ease 0s)
+  @include transition(all 0.2s ease 0s)
 }
 
+.no-underline,
+%no-underline {
+  text-decoration: none;
+  border-bottom: 0;
+
+  &:hover:after,
+  &:visited:hover:after {
+    width: 0;
+    display: none;
+  }
+}
 
 // Colour variants.
 
 // Function outputs something like this, with actual values rather than $variables, 
-// as SASS <3.3 doesn't support them, and maybe never will;
+// as SASS <3.3 doesn't support variable variables, and maybe never will;
 //
 // a.ken {
 //   color: $ken;

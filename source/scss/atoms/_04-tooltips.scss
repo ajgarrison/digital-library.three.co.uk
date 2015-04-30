@@ -1,8 +1,8 @@
 // Tooltips
 
 .tooltip-icon {
-  text-decoration: none;
   color: $clooney;
+  @extend .no-underline;
 }
 
 .tooltip {
