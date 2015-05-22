@@ -1,200 +1,50 @@
 // Colours.
 
-// Base colours.
-$ken      : #ec0044;
-$hucknall : #dc350e;
-$barbie   : #e90066;
-$prince   : #82368c;
-$maggie   : #007bc3;
-$kermit   : #00857b;
-$hulk     : #00864e;
-$clooney  : #767676;
-$vader    : #000;
-$barry    : #fff;
+$i: 1;
 
-// Here for the link/buttons functions, will be integrated below later.
-// Dynamic variables don't exist yet, hence the value as a second attribute.
-$colours:
-  "ken" $ken,
-  "hucknall" $hucknall,
-  "barbie" $barbie,
-  "prince" $prince,
-  "maggie" $maggie,
-  "kermit" $kermit,
-  "hulk" $hulk,
-  "clooney" $clooney,
-  "vader" $vader,
-  "barry" $barry;
+// Lists of colour names and codes for use in loops elsewhere. Stick to American spelling because CSS:
+// Important: These 2 lists must have the same number of items.
+$color-names:  ( barbie,    clooney,    hucknall,   hulk,      ken,        kermit,    maggie,    prince,    vader,   barry );
+$color-values: ( #E90066, #767676, #DC350E,  #00864E, #EC0044, #00857B, #007BC3, #82368C, #000,  #fff  );
+// Friendly colour values to make code more readable:
+$barbie   : nth( $color-values, 1 );
+$clooney  : nth( $color-values, 2 );
+$hucknall : nth( $color-values, 3 );
+$hulk     : nth( $color-values, 4 );
+$ken      : nth( $color-values, 5 );
+$kermit   : nth( $color-values, 6 );
+$maggie   : nth( $color-values, 7 );
+$prince   : nth( $color-values, 8 );
+$vader    : nth( $color-values, 9 );
+$barry    : nth( $color-values, 10);
 
-// Silent named classes
-@each $name in $colours {
+$clooney20 : mix($clooney,#fff,20%);
+$ken20 : mix($ken,#fff,20%);
 
-  %#{nth($name, 1)} {
-    color: #{nth($name, 2)};
+// Silent classes for each named colour:
+// Eg: %ken, %ken-bg, %ken-border and %ken-button.
+@each $name in $color-names {
+  
+  $color: nth( $color-values, $i );
+  $i: $i + 1;
+  
+  %#{ $name }           { color:            $color; } // Coloured text only.     Usage: @extend %ken;
+  %#{ $name }-bg        { background-color: $color; } // Coloured background.    Usage: @extend %ken-bg;
+  %#{ $name }-border    { border-color:     $color; } // Coloured border.        Usage: @extend %ken-border;
+  %#{ $name }-20 { color: mix($color,#fff,20%); }
+  %#{ $name }-60 { color: mix($color,#fff,60%); }
+  %#{ $name }-bg20 { background-color: mix($color,#fff,20%); }
+  %#{ $name }-bg60 { background-color: mix($color,#fff,60%); }
+  %#{ $name }-border20 { border-color: mix($color,#fff,20%); }
+  %#{ $name }-border60 { border-color: mix($color,#fff,60%); }
 
-    &:hover,
-    &:visited:hover {
-      color: #{nth($name, 2)};
-    }
+  // Expose as CSS classes.
 
-  }
-
+  .#{ $name } { @extend %#{ $name }; }
+  .#{ $name }-bg { @extend %#{ $name }-bg; }
+  .#{ $name }-border  { @extend %#{ $name }-border; }
+  .#{ $name }-20 { @extend %#{ $name }-20; }
+  .#{ $name }-60 { @extend %#{ $name }-60; }
+  .#{ $name }-bg20 { @extend %#{ $name }-bg20; }
+  .#{ $name }-bg60 { @extend %#{ $name }-bg60; }
 }
-
-
-// Colour and background variants
-// FIXME - some weird processing error prevents this from compiling.
-//
-// @each $name in $colours {
-//   .colour-#{nth($name, 1)}                { color: #{nth($name, 2)}; }
-//   .colour-#{nth($name, 1)}--tint-60pc     { color: mix( #{nth($name, 2)}, #fff, 60%); }
-//   .colour-#{nth($name, 1)}--tint-20pc     { color: mix( #{nth($name, 2)}, #fff, 20%); }
-//   .colour-#{nth($name, 1)}--shade-60pc    { color: mix( #{nth($name, 2)}, #fff, 60%); }
-//   .colour-#{nth($name, 1)}--shade-20pc    { color: mix( #{nth($name, 2)}, #fff, 20%); }
-//   .background-#{nth($name, 1)}            { background: #{nth($name, 2)}; color:$white; }
-//   .background-#{nth($name, 1)}--tint-60pc { background: mix( #{nth($name, 2)}, #fff, 60%); }
-//   .background-#{nth($name, 1)}--tint-20pc { background: mix( #{nth($name, 2)}, #fff, 20%); }  
-// }
-
-
-
-
-// Tints.
-// Tint adds a percentage of white to a colour, so a 60% tint of a colour is that colour tinted with 40% white (where both values add up to 100%).
-$ken_tint_60pc      : tint(#ec0044, 40%);
-$hucknall_tint_60pc : tint(#dc350e, 40%);
-$barbie_tint_60pc   : tint(#e90066, 40%);
-$prince_tint_60pc   : tint(#82368c, 40%);
-$maggie_tint_60pc   : tint(#007bc3, 40%);
-$kermit_tint_60pc   : tint(#00857b, 40%);
-$hulk_tint_60pc     : tint(#00864e, 40%);
-$clooney_tint_60pc  : tint(#767676, 40%);
-$vader_tint_60pc    : tint(#000, 40%);
-// $barry_tint_60pc    : tint(#fff, 40%);
-
-$ken_tint_20pc      : tint(#ec0044, 80%);
-$hucknall_tint_20pc : tint(#dc350e, 80%);
-$barbie_tint_20pc   : tint(#e90066, 80%);
-$prince_tint_20pc   : tint(#82368c, 80%);
-$maggie_tint_20pc   : tint(#007bc3, 80%);
-$kermit_tint_20pc   : tint(#00857b, 80%);
-$hulk_tint_20pc     : tint(#00864e, 80%);
-$clooney_tint_20pc  : tint(#767676, 80%);
-$vader_tint_20pc    : tint(#000, 80%);
-// $barry_tint_20pc    : tint(#fff, 80%);
-
-
-// Shades.
-// Shades adds a percentage of black to a colour, so a 60% shade of a colour is that colour shaded with 40% black (where both values add up to 100%).
-$ken_shade_60pc      : shade(#ec0044, 40%);
-$hucknall_shade_60pc : shade(#dc350e, 40%);
-$barbie_shade_60pc   : shade(#e90066, 40%);
-$prince_shade_60pc   : shade(#82368c, 40%);
-$maggie_shade_60pc   : shade(#007bc3, 40%);
-$kermit_shade_60pc   : shade(#00857b, 40%);
-$hulk_shade_60pc     : shade(#00864e, 40%);
-$clooney_shade_60pc  : shade(#767676, 40%);
-// $vader_shade_60pc    : shade(#000, 40%); // Vader doesn't need a shade, it's already black!
-$barry_shade_60pc    : shade(#fff, 40%);
-
-$ken_shade_20pc      : shade(#ec0044, 80%);
-$hucknall_shade_20pc : shade(#dc350e, 80%);
-$barbie_shade_20pc   : shade(#e90066, 80%);
-$prince_shade_20pc   : shade(#82368c, 80%);
-$maggie_shade_20pc   : shade(#007bc3, 80%);
-$kermit_shade_20pc   : shade(#00857b, 80%);
-$hulk_shade_20pc     : shade(#00864e, 80%);
-$clooney_shade_20pc  : shade(#767676, 80%);
-// $vader_shade_20pc    : shade(#000, 80%); // Vader doesn't need a shade, it's already black!
-$barry_shade_20pc    : shade(#fff, 80%);
-
-.colour-ken                 { color: $ken; }
-.colour-ken--tint-60pc      { color: $ken_tint_60pc; }
-.colour-ken--tint-20pc      { color: $ken_tint_20pc; }
-.colour-ken--shade-60pc     { color: $ken_shade_60pc; }
-.colour-ken--shade-20pc     { color: $ken_shade_20pc; }
-.background-ken             { background: $ken; color:$white; }
-.background-ken--tint-60pc  { background: $ken_tint_60pc; }
-.background-ken--tint-20pc  { background: $ken_tint_20pc; }
-
-
-.colour-hucknall                 { color: $hucknall; }
-.colour-hucknall--tint-60pc      { color: $hucknall_tint_60pc; }
-.colour-hucknall--tint-20pc      { color: $hucknall_tint_20pc; }
-.colour-hucknall--shade-60pc     { color: $hucknall_shade_60pc; }
-.colour-hucknall--shade-20pc     { color: $hucknall_shade_20pc; }
-.background-hucknall             { background: $hucknall; color:$white; }
-.background-hucknall--tint-60pc  { background: $hucknall_tint_60pc; }
-.background-hucknall--tint-20pc  { background: $hucknall_tint_20pc; }
-
-.colour-barbie                 { color: $barbie; }
-.colour-barbie--tint-60pc      { color: $barbie_tint_60pc; }
-.colour-barbie--tint-20pc      { color: $barbie_tint_20pc; }
-.colour-barbie--shade-60pc     { color: $barbie_shade_60pc; }
-.colour-barbie--shade-20pc     { color: $barbie_shade_20pc; }
-.background-barbie             { background: $barbie; color:$white; }
-.background-barbie--tint-60pc  { background: $barbie_tint_60pc; }
-.background-barbie--tint-20pc  { background: $barbie_tint_20pc; }
-
-.colour-prince                 { color: $prince; }
-.colour-prince--tint-60pc      { color: $prince_tint_60pc; }
-.colour-prince--tint-20pc      { color: $prince_tint_20pc; }
-.colour-prince--shade-60pc     { color: $prince_shade_60pc; }
-.colour-prince--shade-20pc     { color: $prince_shade_20pc; }
-.background-prince             { background: $prince; color:$white; }
-.background-prince--tint-60pc  { background: $prince_tint_60pc; }
-.background-prince--tint-20pc  { background: $prince_tint_20pc; }
-
-.colour-maggie                 { color: $maggie; }
-.colour-maggie--tint-60pc      { color: $maggie_tint_60pc; }
-.colour-maggie--tint-20pc      { color: $maggie_tint_20pc; }
-.colour-maggie--shade-60pc     { color: $maggie_shade_60pc; }
-.colour-maggie--shade-20pc     { color: $maggie_shade_20pc; }
-.background-maggie             { background: $maggie; color:$white; }
-.background-maggie--tint-60pc  { background: $maggie_tint_60pc; }
-.background-maggie--tint-20pc  { background: $maggie_tint_20pc; }
-
-.colour-kermit                 { color: $kermit; }
-.colour-kermit--tint-60pc      { color: $kermit_tint_60pc; }
-.colour-kermit--tint-20pc      { color: $kermit_tint_20pc; }
-.colour-kermit--shade-60pc     { color: $kermit_shade_60pc; }
-.colour-kermit--shade-20pc     { color: $kermit_shade_20pc; }
-.background-kermit             { background: $kermit; color:$white; }
-.background-kermit--tint-60pc  { background: $kermit_tint_60pc; }
-.background-kermit--tint-20pc  { background: $kermit_tint_20pc; }
-
-.colour-hulk             { color: $hulk; }
-.colour-hulk--tint-60pc  { color: $hulk_tint_60pc; }
-.colour-hulk--tint-20pc  { color: $hulk_tint_20pc; }
-.colour-hulk--shade-60pc { color: $hulk_shade_60pc; }
-.colour-hulk--shade-20pc { color: $hulk_shade_20pc; }
-.background-hulk             { background: $hulk; color:$white; }
-.background-hulk--tint-60pc  { background: $hulk_tint_60pc; }
-.background-hulk--tint-20pc  { background: $hulk_tint_20pc; }
-
-.colour-clooney             { color: $clooney; }
-.colour-clooney--tint-60pc  { color: $clooney_tint_60pc; }
-.colour-clooney--tint-20pc  { color: $clooney_tint_20pc; }
-.colour-clooney--shade-60pc { color: $clooney_shade_60pc; }
-.colour-clooney--shade-20pc { color: $clooney_shade_20pc; }
-.background-clooney             { background: $clooney; color:$white; }
-.background-clooney--tint-60pc  { background: $clooney_tint_60pc; }
-.background-clooney--tint-20pc  { background: $clooney_tint_20pc; }
-
-.colour-vader             { color: $vader; }
-.colour-vader--tint-60pc  { color: $vader_tint_60pc; }
-.colour-vader--tint-20pc  { color: $vader_tint_20pc; }
-// .colour-vader--shade-60pc { color: $vader_shade_60pc; }
-// .colour-vader--shade-20pc { color: $vader_shade_20pc; }
-.background-vader             { background: $vader; color:$white; }
-.background-vader--tint-60pc  { background: $vader_tint_60pc; }
-.background-vader--tint-20pc  { background: $vader_tint_20pc; }
-
-.colour-barry             { color: $barry; }
-// .colour-barry--tint-60pc  { color: $barry_tint_60pc; }
-// .colour-barry--tint-20pc  { color: $barry_tint_20pc; }
-.colour-barry--shade-60pc { color: $barry_shade_60pc; }
-.colour-barry--shade-20pc { color: $barry_shade_20pc; }
-.background-barry             { background: $barry; color:$white; }
-.background-barry--shade-60pc  { background: $barry_shade_60pc; }
-.background-barry--shade-20pc  { background: $barry_shade_20pc; }

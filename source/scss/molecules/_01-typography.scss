@@ -3,10 +3,10 @@
 .list--links {
   @extend .list--plain;
 
-  border-top: 1px solid $clooney_tint_20pc;
+  border-top: 1px solid $clooney20;
 
   li {
-    border-bottom: 1px solid $clooney_tint_20pc;
+    border-bottom: 1px solid $clooney20;
     position: relative;
   }
 
@@ -23,7 +23,7 @@
       margin-top: -0.5em;
     }
     &:hover {
-      background: $clooney_tint_20pc;
+      background: $clooney20;
     }
   }
 

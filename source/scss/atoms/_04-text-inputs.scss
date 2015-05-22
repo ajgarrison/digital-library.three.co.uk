@@ -1,6 +1,7 @@
 // Text inputs.
 
 // Inputs without a type are assumed to be treated like text.
+// tyoo strong? just style input and override for radios and checkboxes. Avoid using input[type="button"]s
 input:not([type]), 
 input[type="text"],
 input[type="email"],
@@ -20,7 +21,7 @@ select {
 
 // Read only input fields
 input[readonly], input[readonly="readonly"] {
-  background: $clooney_tint_20pc;
+  background: $clooney20;
   cursor: no-drop;
 
   &:active,
@@ -35,5 +36,5 @@ input[readonly], input[readonly="readonly"] {
 :-moz-placeholder,
 ::-moz-placeholder,
 :-ms-input-placeholder {  
-   color: $clooney_tint_20pc;
+   color: $clooney20;
 }

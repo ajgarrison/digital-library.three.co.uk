@@ -1,13 +1,17 @@
 // Icons
-@font-face {
-  font-family: "h3g-icons";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/h3g-icons.eot?#iefix") format("embedded-opentype"), 
-       url("../fonts/h3g-icons.woff") format("woff"), 
-       url("../fonts/h3g-icons.ttf") format("truetype"), 
-       url("../fonts/h3g-icons.svg#h3g-icons") format("svg");
-}
+
+// Until we build our own we should load icon fonts with icomoon-generated style.css
+// because it takes care of the cachebusting URLs for us.
+
+//@font-face {
+//  font-family: "h3g-icons";
+//  font-style: normal;
+//  font-weight: 400;
+//  src: url("../fonts/h3g-icons.eot?#iefix") format("embedded-opentype"), 
+//       url("../fonts/h3g-icons.woff") format("woff"), 
+//       url("../fonts/h3g-icons.ttf") format("truetype"), 
+//       url("../fonts/h3g-icons.svg#h3g-icons") format("svg");
+//}
 
 [class^="icon-"]:before, 
 [class*=" icon-"]:before {
