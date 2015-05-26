@@ -3,7 +3,7 @@
 .validation-error-list {
 
   border: 2px solid $ken;
-  background: $ken_tint_20pc;
+  background: $ken20;
   padding: 1em;
   margin-bottom: 1em;
 
@@ -31,7 +31,7 @@
 
 .validation-error {
   position: relative;
-  background: $ken_tint_20pc;
+  background: $ken20;
   border: 2px solid $ken;
   padding: 0.5em;
   margin: 13px 0 0 0;
@@ -50,12 +50,12 @@
 
 .validation-error:after {
   border-color: rgba(251, 204, 217, 0);
-  border-bottom-color: $ken_tint_20pc;
+  border-bottom-color: $ken20;
   border-width: 10px;
   margin-left: -10px;
 }
 .validation-error:before {
-  border-color: rgba(266, 0, 68, 0);
+  border-color: rgba(255, 0, 68, 0);
   border-bottom-color: $ken;
   border-width: 13px;
   margin-left: -13px;

@@ -14,6 +14,9 @@ html {
   box-sizing: border-box;
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body { 
   margin: 0;
@@ -26,15 +29,16 @@ body {
   color: $textcolor; 
 }
 
-*::-moz-selection {
-  background: $darkgrey; /* Firefox */
-  color: $white;
-  text-shadow:none;
-}
+*::-moz-selection,
 *::selection {
   background: $darkgrey; /* Safari */
   color: $white;
   text-shadow:none;
+}
+
+:focus { 
+  outline: thin dotted; 
+  outline-offset: 2px;
 }
 
 canvas {

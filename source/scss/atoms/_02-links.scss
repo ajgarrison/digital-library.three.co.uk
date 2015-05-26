@@ -1,80 +1,36 @@
 // Links.
 
 a { 
-  text-decoration : none;
+  text-decoration : underline;
   color : $vader;
+  background-color: transparent;
   font-weight: bold;
-  border-bottom: 1px solid currentColor;
-  position: relative;
-
-  // This doesn't work when a link is wrapped on multiple lines. Does it matter?
-  &:after {
-    content: "";
-    position: absolute;    
-    width: 0;    
-    height: 0.125em; // This renders inconsistently at smaller decimal point sizes (e.g. 0.1) together with smaller font sizes.
-    background: currentColor;
-    left: 0;
-    bottom: 0;
-    @include transition(all 0.2s ease 0s); // Needs adding separately to pseudo elements, doesn't take on transition style from parent.
-
-  }
 
   &:visited { 
     color : $clooney; 
   }
 
   &:hover, 
+  &:focus,
   &:visited:hover { 
-    color : $vader;
-    text-decoration: none;
-    
-    &:after {
-      width: 100%;
-    }
-  }
-
-  &:focus { 
-    outline : thin dotted; 
     color : $vader; 
   }
 
   &:hover, 
   &:active { 
-    outline : 0;
+    outline : 0; 
   }
 
-  @include transition(all 0.2s ease 0s)
+  transition: all 0.35s ease-in-out;
 }
 
-.no-underline,
-%no-underline {
-  text-decoration: none;
-  border-bottom: 0;
-
-  &:hover:after,
-  &:visited:hover:after {
-    width: 0;
-    display: none;
-  }
-}
 
 // Colour variants.
 
-// Function outputs something like this, with actual values rather than $variables, 
-// as SASS <3.3 doesn't support variable variables, and maybe never will;
-//
-// a.ken {
-//   color: $ken;
-// 
-//   &:hover,
-//   &:visited:hover {
-//     color: $ken;
-//   }
-// }
+// is this something we actually want?
 
 // $colours map is defined in _01-colours.scss
-@each $name in $colours {
+@each $name in $color-names {
 
   a.#{nth($name, 1)} {
 

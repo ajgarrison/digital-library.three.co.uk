@@ -1,20 +1,20 @@
 // Tooltips
 
 .tooltip-icon {
+  text-decoration: none;
   color: $clooney;
-  @extend .no-underline;
 }
 
 .tooltip {
   @extend .validation-error;
 
-  background: $clooney_tint_20pc;
+  background: $clooney20;
   border: 2px solid $clooney; 
 }
 
 .tooltip:after {
   border-color: rgba(227, 227, 227, 0);
-  border-bottom-color: $clooney_tint_20pc;
+  border-bottom-color: $clooney20;
   border-width: 10px;
   margin-left: -10px;
 }

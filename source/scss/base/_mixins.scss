@@ -10,7 +10,6 @@
   line-height: ($lineheight / 10) + rem; 
 }
 
-
 @mixin text-overflow() {
 overflow : hidden;
 text-overflow : ellipsis;

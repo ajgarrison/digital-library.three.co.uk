@@ -1,90 +1,99 @@
 // Buttons.
-.button {
+button, 
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: none;
   display: block;
   width: 100%;  // Buttons are always full width at the lowest breakpoint.
   padding: 0.8em 1.5em 0.7em 1.5em;
-  border: 0;
+  border-width: 0;
+  font:inherit;
   font-weight: bold;
   transition: all 0.3s ease 0s;
   line-height: inherit; // Fixes and override in normalise.scss for FF4 issues.
+  cursor:pointer;
+  text-transform: none;
+  
+  overflow: visible;
+  background-color: $clooney;
+  color: #FFF;
+  white-space: nowrap;
+  
+  margin: 0 0 0.2em 0;
+  
+  text-align: center;
+  box-shadow: none;
 
-    &:hover, &:focus {
-      background: $black;
-      color: $white;
-    }
+  border-radius: 0;
 
-    @media only screen and (min-width: $bp-med) {
-      display: inline-block;
-      width: auto;
-    }
-
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
   }
 
-
-  .button--full {
-    width: 100%;
+ 
+  &:hover, &:focus {
+    background-color: $vader;
+    color: $barry;
+  }
+  
+  &.full {
+      display:block;
+      width:100%;
   }
 
+  @media only screen and (min-width: $bp-med) {
+    display: inline-block;
+    width: auto;
+  }
+   
+  // 'Ghost buttons' need a few more things resetting by default, 
+  // and per colour type, as color:; on a 'normal' button is mostly always white.
+  &.ghost {
+    background: transparent;
+    box-shadow: inset 0 0 0 2px currentColor;
+
+    &:hover, 
+    &:focus {
+      background: $barry;
+      box-shadow: none;
+      color: $vader;
+    }
+  }
+  
+  &.disabled,
+  &[disabled] {
+    outline: 1px dashed $clooney !important;
+    background-color: white !important;
+    color: $clooney !important;
+    pointer-events: none;
+    cursor: default !important;
+  } 
+    
+
+}
 
   // Standard coloured buttons just taken on the .button properties
   // but change the background from the colour classes set in _01-colours.scss
-  // Outputs something like this;
-  // .button--ken {
-  //   @extend .button;
-  //   @extend .background-ken;
-  // }
+
   // $colours map is defined in _01-colours.scss
-  @each $name in $colours {
+ // @each $name in $color-names {
 
-    .button--#{nth($name, 1)} {
-      @extend .button;
-      @extend .background-#{nth($name, 1)};
+  //  .button.#{nth($name, 1)} {
+  //    @extend .button;
+  //    @extend .#{nth($name, 1)}-bg;
 
-    }
+  //  }
 
-  }
-
-
-
-  // 'Ghost buttons' need a few more things resetting by default, 
-  // and per colour type, as color:; on a 'normal' button is mostly always white.
-  .button--ghost {
-    @extend .button;
-
-    background: transparent;
-    color: $white;
-    box-shadow: inset 0 0 0 2px currentColor;
-
-    &:hover, &:focus {
-      background: $white;
-      box-shadow: none;
-      color: $black;
-    }
-  }
-
-
-  // Outputs something like this;
-  //
-  //  .button--ken--ghost {
-  //    @extend .button--ghost;
-  //
-  //    color: $ken;
-  //
+  //  .button.ghost.#{nth($name, 1)} {
+  //    @extend .button.ghost;
+  //    color: #{nth($name, 1)};
   //    &:hover, &:focus {
-  //      background: $ken;
-  //      color: $white;
+  //      background-color: #{nth($name, 1)};
+  //      color: $barry;
   //    }
-  //  }  
+  //  }
 
-  @each $name in $colours {
-
-    .button--#{nth($name, 1)}--ghost {
-      @extend .button--ghost;
-      color: #{nth($name, 2)};
-      &:hover, &:focus {
-        background: #{nth($name, 2)};
-        color: $white;
-      }
-    }
-
-  }
+//  }
