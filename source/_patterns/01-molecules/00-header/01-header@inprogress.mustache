@@ -1,0 +1,49 @@
+<header id="head" class="device-width">
+	<div class="device-width-content">
+	
+		<div id="home-and-menu">
+			<a id="homelink" href="/"><i class="hide-if-phone icon-threelogonotext"></i>Three.<span class="hide-if-phone">co.uk</span></a>
+			<i class="icon-menu"><span class="a11y-hide-away">Open menu.</span></i>
+		</div>
+		<div id="nav-and-search">
+	
+			<nav>
+				<!-- 
+					Trying this navigation without the list as per https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/ 
+					Will also allow us to do mobile menu in a single element.
+				-->
+				<div id="mainlinks">
+					<a href="/" class="icon-home">Home.</a>
+					<div>
+						<a href="http://store.three.co.uk/" class="icon-basket">Store.</a>
+						<a href="/Support" class="icon-life-donut">Support.</a>
+						<a href="/Discover" class="icon-tablet-phone">Discover.</a>
+					</div>
+					<a href="/my3" class="icon-pc-phone">My3 Account.</a>
+				</div>
+			</nav>
+	
+			<nav id="mobile-action">
+				<a href="/Support/Store_locator" class="icon-basket">Find your nearest store.</a>
+				<a href="/Support/Coverage" class="icon-signalmast">Check your coverage.</a>
+				<a href="tel:08003584314" class="icon-phone">Buy from us 0800 358 4314.</a>
+			</nav>		
+	
+			<form role="search" id="googlesearch" action="//www.three.co.uk/static/search.htm">
+				<fieldset>
+					<legend class="a11y-hide-away">Where do you want to search?</legend>
+					<input type="radio" name="search-type" checked="checked" value="//www.three.co.uk/static/search.htm" id="search-three">
+					<label for="search-three">Three.</label>
+					<input type="radio" name="search-type" value="http://mybroadband.three.co.uk/dashboardlaunchlink/static/html/mobile_broadband_dongle_login/search_results.html" id="search-web">
+					<label for="search-web">Web.</label>
+				</fieldset>
+		
+				<label class="input-append">
+					<span class="a11y-hide-away">Search</span>
+					<input type="search" id="search-query" name="q" placeholder="What are you looking for?" />
+					<button type="submit" class="icon-search"><span class="a11y-hide-away">Search.</span></button>
+				</label>
+			</form>
+		</div>
+	</div>
+</header>
